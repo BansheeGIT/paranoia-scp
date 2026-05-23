@@ -1260,6 +1260,87 @@ section { padding: 72px 0; }
   letter-spacing: .3em;
 }
 
+/* ===== Roster (список личного состава / потерь) ===== */
+.roster {
+  border: 1px solid var(--line);
+  background: var(--bg-2);
+  font-family: var(--f-mono);
+  margin: 14px 0 18px;
+}
+.roster__head {
+  display: grid;
+  grid-template-columns: 70px 1fr 130px 160px 110px;
+  gap: 12px;
+  padding: 10px 16px;
+  background: var(--bg-3);
+  border-bottom: 1px solid var(--line);
+  font-size: 10px;
+  letter-spacing: .25em;
+  color: var(--text-faint);
+  text-transform: uppercase;
+}
+.roster__row {
+  display: grid;
+  grid-template-columns: 70px 1fr 130px 160px 110px;
+  gap: 12px;
+  padding: 10px 16px;
+  border-bottom: 1px dashed var(--line);
+  font-size: 12.5px;
+  color: var(--text);
+  align-items: baseline;
+}
+.roster__row:last-child { border-bottom: none; }
+.roster__row .id { color: var(--gold); letter-spacing: .12em; }
+.roster__row .nm { font-family: var(--f-display); letter-spacing: .08em; text-transform: uppercase; color: #e8e2cc; font-size: 12.5px; }
+.roster__row .ro { color: var(--text-dim); letter-spacing: .08em; }
+.roster__row .nt { color: var(--text-dim); letter-spacing: .04em; font-size: 12px; }
+.roster__row .st {
+  letter-spacing: .25em;
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border: 1px solid var(--line);
+  justify-self: end;
+  text-align: center;
+  align-self: center;
+}
+.roster__row .st--kia { color: var(--danger); border-color: #4a2316; }
+.roster__row .st--mia { color: #d49158; border-color: #5a3318; }
+.roster__row .st--wia { color: var(--warn); border-color: var(--gold-dim); }
+.roster__row .st--alive { color: var(--ok); border-color: #2f3e1c; }
+.roster__row .highlight { color: var(--gold); }
+@media (max-width: 760px) {
+  .roster__head { display: none; }
+  .roster__row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 12px 14px;
+  }
+  .roster__row .st { justify-self: start; margin-top: 4px; }
+}
+
+.roster-section {
+  margin: 22px 0 12px;
+  font-family: var(--f-display);
+  letter-spacing: .25em;
+  font-size: 13px;
+  color: var(--gold);
+  text-transform: uppercase;
+  padding-bottom: 6px;
+  border-bottom: 1px dashed var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.roster-section .count {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  color: var(--text-faint);
+  letter-spacing: .2em;
+}
+
 /* ===== Mail thread (защищённая внутренняя почта ОВР) ===== */
 .mail-thread {
   margin-top: 18px;

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Список потерь · Зона-65 // BLACK CASCADE</title>
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+<body>
+  <div id="site-nav"></div>
+
+  <main class="report">
+
+    <a href="index.html" class="report__back">&larr; назад в BLACK CASCADE</a>
+
+    <!-- HEADER -->
+    <header class="report-header">
+      <div class="report-header__brand">Фонд SCP</div>
+      <div class="report-header__sub">Кадровая служба МОГ Ню-7 «Молот» · сводный реестр</div>
+
+      <div class="report-classify">
+        <div>
+          <div class="label">допуск</div>
+          <div class="value">LEVEL 3+</div>
+        </div>
+        <div>
+          <div class="label">канал</div>
+          <div class="value">KAD-N7 · внутренний</div>
+        </div>
+        <div>
+          <div class="label">статус</div>
+          <div class="value critical">ВЕРСИЯ 1 · НЕОКОНЧАТЕЛЬНО</div>
+        </div>
+      </div>
+
+      <div class="report-subtitle">сводный реестр личного состава</div>
+      <h1 class="report-title">Зона-65 &mdash; список потерь<br/>(KIA / MIA / WIA)</h1>
+      <div class="report-subtitle">операция: BLACK CASCADE · кульминация 14.05.2026</div>
+
+      <div class="report-meta">
+        <div><span class="k">составил</span><span class="v">кадр. служба Ню-7</span></div>
+        <div><span class="k">основание</span><span class="v">прик. № 044-К-2026</span></div>
+        <div><span class="k">срок</span><span class="v">14.05 &mdash; 17.05.2026</span></div>
+        <div><span class="k">дата сводки</span><span class="v">17.05.2026 · 06:00 UTC</span></div>
+        <div><span class="k">подтвердил</span><span class="v">кап. А. Волькер</span></div>
+        <div><span class="k">верификатор</span><span class="v">ОВР · сл. Н. Кросс</span></div>
+      </div>
+    </header>
+
+    <!-- BODY -->
+    <article class="report-body">
+
+      <div class="callout callout--danger">
+        <strong>Преамбула.</strong> Документ составлен в полевых условиях.
+        Идентификация части тел не завершена. Установление обстоятельств
+        гибели &mdash; невозможно по большинству позиций (тела повреждены,
+        свидетели отсутствуют). Все позиции <em>KIA</em>, по которым нет
+        прямого визуального подтверждения, дублируются как <em>MIA</em>
+        до завершения работы поисковых групп. <strong>Документ будет переработан.</strong>
+      </div>
+
+      <h2>Сводка</h2>
+      <p style="font-family: var(--f-mono); font-size: 13px; line-height: 1.8;">
+        Общая численность МОГ Ню-7 на объекте в момент атаки:
+        <span class="gold">64</span> оператора (8 отделений × 8 чел.) +
+        <span class="gold">9</span> командного состава.<br/>
+        Эвакуировано: <span class="gold">1</span> &mdash; кап. А. Волькер.<br/>
+        Подтверждено погибшими: <span style="color: var(--danger);">38</span>.<br/>
+        Пропали без вести: <span style="color: #d49158;">31</span>.<br/>
+        Раненые (госпитализированы): <span style="color: var(--warn);">3</span> (эвакуированы 12&ndash;13.05 до начала штурма).
+      </p>
+
+      <p class="muted">
+        Список приводится по отделениям. Внутри отделения &mdash; по званию.
+        Соблюдена форма штатного расписания МОГ.
+      </p>
+
+      <!-- COMMAND -->
+      <div class="roster-section">
+        <span>Командный состав</span>
+        <span class="count">9 позиций · 1 эвакуирован · 8 не вернулись</span>
+      </div>
+      <div class="roster">
+        <div class="roster__head">
+          <div>ID</div>
+          <div>Имя · позывной</div>
+          <div>Должность</div>
+          <div>Примечание</div>
+          <div>Статус</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0001</div>
+          <div class="nm">Адриан Волькер · «Волк»</div>
+          <div class="ro">кап., супервайзер</div>
+          <div class="nt">эвакуирован, рук. сводного списка</div>
+          <div class="st st--alive">alive</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0002</div>
+          <div class="nm">Малек Брандт · «Лом»</div>
+          <div class="ro">ст. лейт., ОПС-1</div>
+          <div class="nt">внешний периметр, сектор P-3</div>
+          <div class="st st--kia">kia</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0004</div>
+          <div class="nm">Антония Куэвас · «Колокол»</div>
+          <div class="ro">лейт., связь</div>
+          <div class="nt">диспетчерская, последний сигнал 23:51 UTC</div>
+          <div class="st st--mia">mia</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0006</div>
+          <div class="nm">Ярон Седов · «Тень»</div>
+          <div class="ro">лейт., ОПС-2</div>
+          <div class="nt">подуровень-3, потеряна связь 23:34</div>
+          <div class="st st--mia">mia</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0008</div>
+          <div class="nm">Леонард Кройц · «Часовой»</div>
+          <div class="ro">лейт., ОПС-3</div>
+          <div class="nt">восточные технические коридоры</div>
+          <div class="st st--mia">mia</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0010</div>
+          <div class="nm">Имоджен Стайлс · «Венера»</div>
+          <div class="ro">лейт., научное сопровождение</div>
+          <div class="nt">исследовательский сектор-02</div>
+          <div class="st st--mia">mia</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0011</div>
+          <div class="nm">Кристиан Хальм · «Кузнец»</div>
+          <div class="ro">лейт., оружейник</div>
+          <div class="nt">арсенал A, тело подтверждено</div>
+          <div class="st st--kia">kia</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0014</div>
+          <div class="nm">Бранко Мариш · «Резак»</div>
+          <div class="ro">лейт., ОПС-4</div>
+          <div class="nt">внешний периметр, сектор P-4</div>
+          <div class="st st--kia">kia</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0016</div>
+          <div class="nm">Айса Лорка · «Серп»</div>
+          <div class="ro">лейт., медкоманда</div>
+          <div class="nt">медицинский блок C</div>
+          <div class="st st--mia">mia</div>
+        </div>
+      </div>
+
+      <!-- ОПС-1 -->
+      <div class="roster-section">
+        <span>Отделение ОПС-1 &mdash; внешний периметр, сектор P-2</span>
+        <span class="count">8 позиций · 7 KIA · 1 MIA</span>
+      </div>
+      <div class="roster">
+        <div class="roster__head">
+          <div>ID</div><div>Имя · позывной</div><div>Должность</div><div>Примечание</div><div>Статус</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0102</div>
+          <div class="nm">Янис Кербер</div>
+          <div class="ro">сержант</div>
+          <div class="nt">подтв. бортовым медиком</div>
+          <div class="st st--kia">kia</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0103</div>
+          <div class="nm">Туар Локк</div>
+          <div class="ro">оператор</div>
+          <div class="nt">тело идентифицировано по жетону</div>
+          <div class="st st--kia">kia</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0104</div>
+          <div class="nm">Йоэль Маркссон</div>
+          <div class="ro">оператор</div>
+          <div class="nt">тело идентифицировано</div>
+          <div class="st st--kia">kia</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0105</div>
+          <div class="nm">Линда Велс</div>
+          <div class="ro">оператор</div>
+          <div class="nt">тело идентифицировано</div>
+          <div class="st st--kia">kia</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0106</div>
+          <div class="nm">Стефан Дрожек</div>
+          <div class="ro">оператор</div>
+          <div class="nt">тело идентифицировано</div>
+          <div class="st st--kia">kia</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0107</div>
+          <div class="nm">Магда Хейс</div>
+          <div class="ro">снайпер</div>
+          <div class="nt">тело идентифицировано</div>
+          <div class="st st--kia">kia</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0108</div>
+          <div class="nm">Расс Колдер</div>
+          <div class="ro">пулемётчик</div>
+          <div class="nt">пост покинут, тело не найдено</div>
+          <div class="st st--mia">mia</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0109</div>
+          <div class="nm">Кай Эвстад</div>
+          <div class="ro">медик отделения</div>
+          <div class="nt">тело идентифицировано</div>
+          <div class="st st--kia">kia</div>
+        </div>
+      </div>
+
+      <!-- ОПС-2 — внутренний периметр, восточные коридоры -->
+      <div class="roster-section">
+        <span>Отделение ОПС-2 &mdash; внутренний периметр, восточные коридоры</span>
+        <span class="count">8 позиций · 2 KIA · 6 MIA</span>
+      </div>
+      <div class="roster">
+        <div class="roster__head">
+          <div>ID</div><div>Имя · позывной</div><div>Должность</div><div>Примечание</div><div>Статус</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0202</div>
+          <div class="nm">Карел Линдт</div>
+          <div class="ro">сержант</div>
+          <div class="nt">связь обрывается 23:42 UTC, коридор B-19</div>
+          <div class="st st--mia">mia</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0203</div>
+          <div class="nm">Самир Хадис</div>
+          <div class="ro">оператор</div>
+          <div class="nt">коридор B-19</div>
+          <div class="st st--mia">mia</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0204</div>
+          <div class="nm">Эмили Гаррик</div>
+          <div class="ro">оператор</div>
+          <div class="nt">коридор B-19</div>
+          <div class="st st--mia">mia</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0205</div>
+          <div class="nm">Кирилл Альмаш</div>
+          <div class="ro">оператор</div>
+          <div class="nt">тело идентифицировано, гермоворот 4-Е</div>
+          <div class="st st--kia">kia</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0206</div>
+          <div class="nm">Беатрис Лангер</div>
+          <div class="ro">оператор</div>
+          <div class="nt">коридор B-19</div>
+          <div class="st st--mia">mia</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0207</div>
+          <div class="nm">Хейкки Туорма</div>
+          <div class="ro">подрывник</div>
+          <div class="nt">подтв. кадрами с тепловизора</div>
+          <div class="st st--kia">kia</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0208</div>
+          <div class="nm">Айя Ким</div>
+          <div class="ro">оператор</div>
+          <div class="nt">коридор B-19</div>
+          <div class="st st--mia">mia</div>
+        </div>
+        <div class="roster__row">
+          <div class="id" style="color: #f5c870;">N7-0827</div>
+          <div class="nm" style="color: #f5c870;">Джеймс Уокер · «Бэйт»</div>
+          <div class="ro">оператор · BODYCAM-17</div>
+          <div class="nt highlight">последняя запись 23:46:19 UTC · ATT-02 в полевом отчёте</div>
+          <div class="st st--mia">mia</div>
+        </div>
+      </div>
+
+      <!-- ОПС-3 — арсенал, оружейная -->
+      <div class="roster-section">
+        <span>Отделение ОПС-3 &mdash; арсенал A, восточный</span>
+        <span class="count">8 позиций · 5 KIA · 3 MIA</span>
+      </div>
+      <div class="roster">
+        <div class="roster__head">
+          <div>ID</div><div>Имя · позывной</div><div>Должность</div><div>Примечание</div><div>Статус</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0302</div>
+          <div class="nm">Олаф Беринг</div>
+          <div class="ro">сержант</div>
+          <div class="nt">тело подтверждено</div>
+          <div class="st st--kia">kia</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0303</div>
+          <div class="nm">Нассим Дюбуа</div>
+          <div class="ro">оператор</div>
+          <div class="nt">тело подтверждено</div>
+          <div class="st st--kia">kia</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0304</div>
+          <div class="nm">Зара Кейн</div>
+          <div class="ro">оператор</div>
+          <div class="nt">тело подтверждено</div>
+          <div class="st st--kia">kia</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0305</div>
+          <div class="nm">Лука Серенс</div>
+          <div class="ro">оператор</div>
+          <div class="nt">не идентифицирован, фрагменты</div>
+          <div class="st st--mia">mia</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0306</div>
+          <div class="nm">Андерс Хетте</div>
+          <div class="ro">оператор</div>
+          <div class="nt">не идентифицирован</div>
+          <div class="st st--mia">mia</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0307</div>
+          <div class="nm">Майка Корн</div>
+          <div class="ro">снайпер</div>
+          <div class="nt">тело подтверждено</div>
+          <div class="st st--kia">kia</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0308</div>
+          <div class="nm">Эфраим Воло</div>
+          <div class="ro">пулемётчик</div>
+          <div class="nt">тело подтверждено</div>
+          <div class="st st--kia">kia</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">N7-0309</div>
+          <div class="nm">Йонатан Ниро</div>
+          <div class="ro">медик отделения</div>
+          <div class="nt">пост покинут, тело не найдено</div>
+          <div class="st st--mia">mia</div>
+        </div>
+      </div>
+
+      <p class="muted" style="margin-top: 22px; padding-top: 14px; border-top: 1px dashed var(--line);">
+        Отделения ОПС-4 &mdash; ОПС-8 &mdash; полный реестр готовится. По предварительным данным:
+        ОПС-4 (внешний периметр P-4) &mdash; <span class="gold">8/8 не вернулись</span>;
+        ОПС-5 (медицинский блок C) &mdash; <span class="gold">8/8 потеряны</span>, связь утрачена в 23:28;
+        ОПС-6 (подуровень-3) &mdash; <span class="gold">8/8 потеряны</span>, поисковые группы не направлялись;
+        ОПС-7, ОПС-8 &mdash; разрозненные группы прикрытия, статистика в обработке.
+      </p>
+
+      <h2>Особые отметки</h2>
+
+      <p>
+        <strong>N7-0827 «Бэйт».</strong> Запись с нагрудной камеры оператора Уокера
+        в коридоре B-19 (23:46:19 UTC) приобщена к
+        <a href="zone-65-field-report.html">полевому отчёту</a> в качестве вложения ATT-02.
+        В момент гибели &mdash; в составе ОПС-2, прикрывал отход научной группы из
+        восточного крыла. Группа эвакуирована не была.
+      </p>
+
+      <p>
+        <strong>N7-0001 «Волк».</strong> Капитан Волькер &mdash; единственный из командного
+        состава, эвакуированный с объекта. Передавал полевой отчёт с борта Helix-2 в
+        23:58 UTC. На текущей дате &mdash; в Зоне-31, переведён в должность советника
+        без оперативного подчинения.
+      </p>
+
+      <blockquote>
+        «Я не оставил их. Они остались, потому что я успел уйти. Это разные вещи.
+        Я хочу, чтобы это было записано.» &mdash; устное заявление кап. Волькера
+        для протокола, 16.05.2026.
+      </blockquote>
+
+      <h2>Статус документа</h2>
+      <p>
+        Реестр <strong>не окончательный</strong>. Поисковые группы будут направлены
+        повторно после стабилизации обстановки. Семьи извещены по штатной процедуре
+        Кадровой службы (форма КС-114). Для семей операторов, числящихся MIA,
+        выплаты приостановлены до перевода статуса в KIA &mdash; срок не позднее
+        90 суток с момента инцидента.
+      </p>
+
+      <p class="faint" style="margin-top: 32px; font-size: 12px;">
+        — составил: <span class="gold">кадр. служба МОГ Ню-7</span><br/>
+        — заверил: <span class="gold">кап. А. Волькер</span><br/>
+        — верифицировал: <span class="gold">сл. Н. Кросс, ОВР</span><br/>
+        — статус: <span class="gold">в работе · версия 1 от 17.05.2026</span>
+      </p>
+
+    </article>
+
+    <div class="report-footer">
+      <span>досье · кадр. служба Ню-7 · BLACK CASCADE</span>
+      <span class="motto">Обезопасить. Удержать. Сохранить.</span>
+    </div>
+
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="../../nav.js"></script>
+</body>
+</html>
