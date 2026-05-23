@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Личный мессенджер · Н. Кросс // Зона-31</title>
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+<body>
+  <div id="site-nav"></div>
+
+  <main class="report">
+
+    <a href="index.html" class="report__back">&larr; назад в Досье Зоны-31</a>
+
+    <!-- HEADER -->
+    <header class="report-header">
+      <div class="report-header__brand">Фонд SCP</div>
+      <div class="report-header__sub">Не санкционировано к публикации · перехват личного мессенджера</div>
+
+      <div class="report-classify">
+        <div><div class="label">допуск</div><div class="value">LEVEL 4+</div></div>
+        <div><div class="label">канал</div><div class="value">LEAKED · вне регламента</div></div>
+        <div><div class="label">статус</div><div class="value critical">МАТЕРИАЛ ВНЕ ДЕЛА</div></div>
+      </div>
+
+      <div class="report-subtitle">приобщено к материалам &mdash; вопреки регламенту</div>
+      <h1 class="report-title">Личный мессенджер<br/>сл. Н. Кросс, ОВР</h1>
+      <div class="report-subtitle">фрагменты переписки за 2024 &mdash; 2026</div>
+
+      <div class="report-meta">
+        <div><span class="k">владелец устройства</span><span class="v">сл. Н. Кросс, ОВР</span></div>
+        <div><span class="k">приложение</span><span class="v">внутренний клиент Фонда</span></div>
+        <div><span class="k">период</span><span class="v">с 09.2024 по 23.05.2026</span></div>
+        <div><span class="k">источник приобщения</span><span class="v"><span class="redacted">██████████</span></span></div>
+        <div><span class="k">санкция</span><span class="v">отсутствует</span></div>
+        <div><span class="k">сохранено в</span><span class="v">ВР-Z31-044 &middot; приложение L-01</span></div>
+      </div>
+    </header>
+
+    <article class="report-body">
+
+      <div class="callout callout--danger">
+        <strong>Замечание ОВР.</strong> Материал представляет собой выгрузку из
+        служебного мессенджера, не санкционированную к публикации. Принадлежность
+        и подлинность подтверждена. <em>Способ получения архивом &mdash; на отдельном
+        рассмотрении.</em> Содержимое включает фрагменты бытовой переписки, не
+        относящиеся к делу напрямую, но используемые для понимания состояния
+        и контекста сотрудника.
+      </div>
+
+      <!-- CHAT APP -->
+      <div class="chat-app" id="chatApp">
+
+        <aside class="chat-app__sidebar">
+          <div class="chat-app__sidebar-head">
+            <span><span class="gold">●</span> онлайн</span>
+            <span>4 чата</span>
+          </div>
+          <div class="chat-app__sidebar-list">
+
+            <div class="chat-contact is-active" data-chat="notes">
+              <div class="chat-contact__avatar is-self">Н·К</div>
+              <div class="chat-contact__main">
+                <div class="chat-contact__name">Заметки для себя</div>
+                <div class="chat-contact__preview">если со мной что-то случится...</div>
+              </div>
+              <div class="chat-contact__time">сейчас</div>
+            </div>
+
+            <div class="chat-contact" data-chat="walker">
+              <div class="chat-contact__avatar is-dead">Дж·У</div>
+              <div class="chat-contact__main">
+                <div class="chat-contact__name">«Бэйт»</div>
+                <div class="chat-contact__preview">береги себя, Натан.</div>
+              </div>
+              <div class="chat-contact__time">13.05</div>
+            </div>
+
+            <div class="chat-contact" data-chat="helena">
+              <div class="chat-contact__avatar">Х</div>
+              <div class="chat-contact__main">
+                <div class="chat-contact__name">Хелена (сестра)</div>
+                <div class="chat-contact__preview">постарайся хорошо.</div>
+              </div>
+              <div class="chat-contact__time">19.05</div>
+              <div class="chat-contact__badge">2</div>
+            </div>
+
+            <div class="chat-contact" data-chat="carran">
+              <div class="chat-contact__avatar">С·К</div>
+              <div class="chat-contact__main">
+                <div class="chat-contact__name">С. Карран · ГОК</div>
+                <div class="chat-contact__preview">не у нас.</div>
+              </div>
+              <div class="chat-contact__time">22.05</div>
+            </div>
+
+          </div>
+        </aside>
+
+        <main class="chat-app__main">
+
+          <!-- ====== NOTES (Заметки для себя) ====== -->
+          <section class="chat-window is-active" id="chat-notes">
+            <div class="chat-window__head">
+              <button class="back" type="button" data-back>&larr; назад</button>
+              <span class="who">Заметки для себя</span>
+              <span class="status">только мне видно</span>
+            </div>
+            <div class="chat-window__body">
+
+              <div class="chat-divider">апрель 2026</div>
+
+              <div class="chat-msg chat-msg--out">
+                Объект 31. Третья неделя. Журналы Пейнхолла &mdash; идеальные, до запятой.
+                <em>Слишком идеальные.</em>
+                <div class="chat-msg__time">22.04 · 23:47</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Спросить у инженеров: были ли заявки на ремонт камер за апрель.
+                <div class="chat-msg__time">22.04 · 23:51</div>
+              </div>
+
+              <div class="chat-divider">май 2026</div>
+
+              <div class="chat-msg chat-msg--out">
+                Морган. Не помнит ничего и помнит всё. Не путать одно с другим.
+                <div class="chat-msg__time">11.05 · 16:02</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Сны: каждую ночь, около двух лет. Руки что-то делают, человек просыпается
+                до того, как видит результат. Записать вопрос для психолога: бывает ли
+                <em>групповой</em> такой сон? Если несколько человек одновременно?
+                <div class="chat-msg__time">11.05 · 16:08</div>
+              </div>
+
+              <div class="chat-msg chat-msg--voice">
+                <span class="icon">▶</span>
+                <span>голосовое &middot; 00:14 &middot; <em>транскрипт не сохранён</em></span>
+              </div>
+              <div class="chat-msg__time" style="align-self: flex-end; margin: -4px 0 8px;">11.05 · 16:09</div>
+
+              <div class="chat-msg chat-msg--out">
+                Орёл прав. Прагматика, не безразличие. <em>Это страшнее.</em>
+                <div class="chat-msg__time">15.05 · 23:50</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Сегодня узнал, что Зона-65 пала вчера ночью. Узнал на завтраке. Из чужой
+                реплики в коридоре. Никто мне не написал.
+                <div class="chat-msg__time">15.05 · 09:14</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                <em>Я подавал запрос на доступ к Red Light в феврале. Отказ. Не помню,
+                кто подписал отказ. В журнале &mdash; имя есть, но я не помню, чтобы я его
+                читал. Это странно. Записываю это и понимаю, что это странно.</em>
+                <div class="chat-msg__time">16.05 · 04:38</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Если со мной что-то случится &mdash; в верхнем ящике шкафа в спальне:
+                <br/>1) папка с пометкой «ВР-Z31-044/dup»
+                <br/>2) флешка серая, без подписи
+                <br/>3) конверт для Хелены, не открывать <em>до</em>, открыть <em>после</em>.
+                <div class="chat-msg__time">17.05 · 02:11</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Хайнс сегодня получил шифрограмму. С отметкой E-11. Он её не открывал
+                при мне. Положил в сейф.
+                <br/>Я не должен был это видеть.
+                <br/>Я видел.
+                <div class="chat-msg__time">20.05 · 11:24</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Список того, что я узнаю, если не остановят:
+                <br/>— кто подписал отказ по Red Light в феврале
+                <br/>— что именно держит Хайнс в сейфе
+                <br/>— куда уходят аккумуляторы из Пейнхолла (не закрытый вопрос)
+                <br/>— почему Эпсилон-11 не была на четырёх запросах подряд
+                <br/>— где «Курьер» в августе 2022 был
+                <br/>(последний пункт &mdash; не моя зона. Но это связано.)
+                <div class="chat-msg__time">22.05 · 03:02</div>
+              </div>
+
+              <div class="chat-msg chat-msg--deleted">
+                сообщение удалено &middot; 22.05 · 03:14
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Не пишу. Не помогает. Кофе кончился. На улице снег &mdash; в мае, в Орегоне.
+                <em>Это ничего не значит. Это просто погода.</em>
+                <div class="chat-msg__time">23.05 · 04:41</div>
+              </div>
+
+              <div class="chat-msg chat-msg--draft">
+                Если ты это читаешь и ты &mdash; не я, оставь, пожалуйста, на месте.
+                Я ещё не закончил думать.
+                <div class="chat-msg__time">черновик &middot; изменён 24.05 · 01:07</div>
+              </div>
+
+              <div class="chat-system">— последнее изменение 5 минут назад —</div>
+
+            </div>
+          </section>
+
+          <!-- ====== WALKER («Бэйт») ====== -->
+          <section class="chat-window" id="chat-walker">
+            <div class="chat-window__head">
+              <button class="back" type="button" data-back>&larr; назад</button>
+              <span class="who">«Бэйт» &middot; Джеймс Уокер</span>
+              <span class="status" style="color: var(--danger);">был(а) в сети 14.05.2026 · 23:46 UTC</span>
+            </div>
+            <div class="chat-window__body">
+
+              <div class="chat-divider">февраль 2024</div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Джеймс</span>
+                Натан. Мне дали позывной. <em>«Бэйт».</em> Серьёзно.
+                <div class="chat-msg__time">11.02.2024 · 19:32</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Поздравляю. Почему «Бэйт»?
+                <div class="chat-msg__time">11.02.2024 · 19:34</div>
+              </div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Джеймс</span>
+                Потому что меня всегда первым в дверь.
+                <div class="chat-msg__time">11.02.2024 · 19:34</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Это <em>не</em> повод для гордости.
+                <div class="chat-msg__time">11.02.2024 · 19:35</div>
+              </div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Джеймс</span>
+                Это повод для премии. Дверь дверью, а премия премией. 🙂
+                <div class="chat-msg__time">11.02.2024 · 19:36</div>
+              </div>
+
+              <div class="chat-divider">июль 2024</div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Джеймс</span>
+                Сайт-37 закрыли. Ты слышал?
+                <div class="chat-msg__time">20.07.2024 · 22:14</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Слышал.
+                <div class="chat-msg__time">20.07.2024 · 22:16</div>
+              </div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Джеймс</span>
+                Я там был на локализации, неделю. Ты не поверишь сколько там было... <em>странного</em>.
+                <div class="chat-msg__time">20.07.2024 · 22:17</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Поверю.
+                <div class="chat-msg__time">20.07.2024 · 22:18</div>
+              </div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Джеймс</span>
+                Ну ты теперь в ОВР. С тобой <em>опасно</em> делиться.
+                <div class="chat-msg__time">20.07.2024 · 22:18</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                С тобой тоже. Ты ничего не помнишь &mdash; и это удобно следствию.
+                <div class="chat-msg__time">20.07.2024 · 22:19</div>
+              </div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Джеймс</span>
+                Я помню. Просто никому не говорю.
+                <div class="chat-msg__time">20.07.2024 · 22:20</div>
+              </div>
+
+              <div class="chat-divider">февраль 2026</div>
+
+              <div class="chat-msg chat-msg--out">
+                Я в Зоне-31. На квартал минимум.
+                <div class="chat-msg__time">04.02.2026 · 07:50</div>
+              </div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Джеймс</span>
+                В Орегоне? Там же лес и медведи.
+                <div class="chat-msg__time">04.02.2026 · 09:11</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                В основном медведи.
+                <div class="chat-msg__time">04.02.2026 · 09:12</div>
+              </div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Джеймс</span>
+                Поужинаем когда выберешься. У меня в Вене квартира на полгода, можем там.
+                <div class="chat-msg__time">04.02.2026 · 09:15</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                После того как я тут закончу. Договорились.
+                <div class="chat-msg__time">04.02.2026 · 09:16</div>
+              </div>
+
+              <div class="chat-divider">май 2026</div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Джеймс</span>
+                Натан. Завтра меня перебрасывают. Видимо опять что-то горит. Береги себя.
+                <div class="chat-msg__time">13.05.2026 · 13:08</div>
+              </div>
+
+              <div class="chat-system">прочитано · 13.05.2026 · 13:31<br/>ответа не отправлено</div>
+
+              <div class="chat-divider">после</div>
+
+              <div class="chat-msg chat-msg--out">
+                Прости что не ответил.
+                <div class="chat-msg__time">15.05.2026 · 05:18</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Я в Зоне-31. Я узнал на завтраке. <em>Я узнал из чужой реплики.</em>
+                <div class="chat-msg__time">15.05.2026 · 05:19</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Я бы успел ответить. У меня было четыре часа. Я смотрел в телефон.
+                Я не открыл сообщение.
+                <div class="chat-msg__time">15.05.2026 · 05:21</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Я открыл. Я не ответил.
+                <div class="chat-msg__time">15.05.2026 · 05:22</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Бэйт.
+                <div class="chat-msg__time">17.05.2026 · 03:44</div>
+              </div>
+
+              <div class="chat-msg chat-msg--draft">
+                Я разбираю реестр потерь. Ты в нём как MIA. Это значит, что формально
+                ты ещё можешь вернуться. Я это знаю. Я разбираю потому, что мне нужно
+                делать <em>что-то</em>.
+                <div class="chat-msg__time">черновик &middot; не отправлено &middot; 17.05.2026</div>
+              </div>
+
+              <div class="chat-system">— сообщения не доставлены: собеседник недоступен —</div>
+
+            </div>
+          </section>
+
+          <!-- ====== HELENA (сестра) ====== -->
+          <section class="chat-window" id="chat-helena">
+            <div class="chat-window__head">
+              <button class="back" type="button" data-back>&larr; назад</button>
+              <span class="who">Хелена · сестра</span>
+              <span class="status">в сети · Гётеборг</span>
+            </div>
+            <div class="chat-window__body">
+
+              <div class="chat-divider">март 2026</div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Хелена</span>
+                Натан, ты не позвонил во вторник как обещал.
+                <div class="chat-msg__time">03.03 · 21:14</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Прости. Был занят. Как близнецы?
+                <div class="chat-msg__time">04.03 · 06:48</div>
+              </div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Хелена</span>
+                Они тебя уже не узнают по голосу. Это нормально, ты это понимаешь.
+                <div class="chat-msg__time">04.03 · 07:02</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Понимаю.
+                <div class="chat-msg__time">04.03 · 07:03</div>
+              </div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Хелена</span>
+                Что у тебя на работе?
+                <div class="chat-msg__time">04.03 · 07:05</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Всё стандартно.
+                <div class="chat-msg__time">04.03 · 07:07</div>
+              </div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Хелена</span>
+                Ты так говоришь, когда плохо.
+                <div class="chat-msg__time">04.03 · 07:08</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Стандартно стандартно. Не волнуйся.
+                <div class="chat-msg__time">04.03 · 07:09</div>
+              </div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Хелена</span>
+                Я не верю тебе, но не настаиваю.
+                <div class="chat-msg__time">04.03 · 07:11</div>
+              </div>
+
+              <div class="chat-divider">апрель 2026</div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Хелена</span>
+                Эмиль спросил, кем ты работаешь. Я сказала &mdash; в министерстве.
+                В каком министерстве, спросил он. Я сказала &mdash; в скучном.
+                Он успокоился.
+                <div class="chat-msg__time">12.04 · 19:32</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Скажи ему что в министерстве архивов. Это близко к правде и звучит
+                ещё скучнее.
+                <div class="chat-msg__time">12.04 · 22:11</div>
+              </div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Хелена</span>
+                😄
+                <div class="chat-msg__time">12.04 · 22:14</div>
+              </div>
+
+              <div class="chat-divider">май 2026</div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Хелена</span>
+                По новостям что-то сегодня про лесной пожар на востоке. Это рядом с
+                твоим местом?
+                <div class="chat-msg__time">15.05 · 18:21</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Нет. Я в другой стране. И в другом полушарии.
+                <div class="chat-msg__time">15.05 · 18:42</div>
+              </div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Хелена</span>
+                Ты не в том полушарии, в котором мама думает что ты.
+                <div class="chat-msg__time">15.05 · 18:43</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Маме лучше не уточнять.
+                <div class="chat-msg__time">15.05 · 18:44</div>
+              </div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Хелена</span>
+                Я и не уточняю. Я &mdash; уточняю тебе.
+                <div class="chat-msg__time">15.05 · 18:44</div>
+              </div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Хелена</span>
+                Ты вернёшься на Рождество?
+                <div class="chat-msg__time">19.05 · 20:08</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Постараюсь.
+                <div class="chat-msg__time">19.05 · 20:14</div>
+              </div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Хелена</span>
+                Постарайся хорошо.
+                <div class="chat-msg__time">19.05 · 20:15</div>
+              </div>
+
+              <div class="chat-system">— непрочитанных: 2 —</div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Хелена</span>
+                Натан?
+                <div class="chat-msg__time">23.05 · 21:12</div>
+              </div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Хелена</span>
+                Я знаю, что ты онлайн. Просто скажи «ок».
+                <div class="chat-msg__time">24.05 · 00:04</div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- ====== CARRAN (ГОК) ====== -->
+          <section class="chat-window" id="chat-carran">
+            <div class="chat-window__head">
+              <button class="back" type="button" data-back>&larr; назад</button>
+              <span class="who">С. Карран · ГОК</span>
+              <span class="status">шифрованный канал · оффлайн</span>
+            </div>
+            <div class="chat-window__body">
+
+              <div class="chat-system">канал инициирован С. Карран · ключ обновлён 03.2026</div>
+
+              <div class="chat-divider">март 2026</div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Сабина</span>
+                Натан. Слышала, что ты на северо-западе. Я тоже.
+                <div class="chat-msg__time">14.03 · 11:02</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Совпадение нравится?
+                <div class="chat-msg__time">14.03 · 11:14</div>
+              </div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Сабина</span>
+                Я не верю в совпадения с тех пор, как ты в Берлине рассказал мне про
+                ту лесенку. Если что &mdash; мой сектор закрывает твой северный фланг.
+                Не за спасибо. Просто &mdash; чтобы ты знал.
+                <div class="chat-msg__time">14.03 · 11:16</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Принял. Спасибо.
+                <div class="chat-msg__time">14.03 · 11:17</div>
+              </div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Сабина</span>
+                Ваш Хайнс что-то знает?
+                <div class="chat-msg__time">14.03 · 11:19</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Если и знает &mdash; не делится. С кем угодно.
+                <div class="chat-msg__time">14.03 · 11:21</div>
+              </div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Сабина</span>
+                Это не значит, что не знает.
+                <div class="chat-msg__time">14.03 · 11:21</div>
+              </div>
+
+              <div class="chat-divider">апрель 2026</div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Сабина</span>
+                У вас в северном секторе спокойно?
+                <div class="chat-msg__time">28.04 · 03:42</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Не сейчас.
+                <div class="chat-msg__time">28.04 · 03:48</div>
+              </div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Сабина</span>
+                Я могу прислать «Пастора» с группой. Без бумаг.
+                <div class="chat-msg__time">28.04 · 03:49</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Пока нет. Если попрошу &mdash; пришли. Если попрошу через Хайнса &mdash; не приходи.
+                <div class="chat-msg__time">28.04 · 03:52</div>
+              </div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Сабина</span>
+                Принято.
+                <div class="chat-msg__time">28.04 · 03:52</div>
+              </div>
+
+              <div class="chat-divider">15 мая 2026</div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Сабина</span>
+                Зона-65.
+                <div class="chat-msg__time">15.05 · 04:11</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Знаю.
+                <div class="chat-msg__time">15.05 · 04:13</div>
+              </div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Сабина</span>
+                Натан. У нас в архиве по Берлину было слово. <em>Красный.</em>
+                Помнишь?
+                <div class="chat-msg__time">15.05 · 04:14</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Помню, что было.
+                <div class="chat-msg__time">15.05 · 04:18</div>
+              </div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Сабина</span>
+                У нас идут слухи, что он не закрыт.
+                <div class="chat-msg__time">15.05 · 04:18</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Слухи &mdash; это слухи.
+                <div class="chat-msg__time">15.05 · 04:21</div>
+              </div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Сабина</span>
+                Не у нас.
+                <div class="chat-msg__time">15.05 · 04:21</div>
+              </div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Сабина</span>
+                Я не прошу подтверждения. Я прошу &mdash; запиши где-нибудь, что я тебе
+                это сказала. На случай если потом будут спрашивать, кто знал.
+                <div class="chat-msg__time">15.05 · 04:23</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                Записал.
+                <div class="chat-msg__time">15.05 · 04:24</div>
+              </div>
+
+              <div class="chat-divider">22 мая 2026</div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Сабина</span>
+                Натан. У ваших операция в шестидесяти километрах от Игл-Крик. Не наша.
+                Не Фонд. Кто-то третий. Просто чтоб ты знал.
+                <div class="chat-msg__time">22.05 · 18:54</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                У меня нет операции в Игл-Крик.
+                <div class="chat-msg__time">22.05 · 19:02</div>
+              </div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Сабина</span>
+                Знаю. Поэтому и сказала.
+                <div class="chat-msg__time">22.05 · 19:02</div>
+              </div>
+
+              <div class="chat-msg chat-msg--in">
+                <span class="chat-msg__from">Сабина</span>
+                Береги себя.
+                <div class="chat-msg__time">22.05 · 19:03</div>
+              </div>
+
+              <div class="chat-msg chat-msg--out">
+                И ты.
+                <div class="chat-msg__time">22.05 · 19:04</div>
+              </div>
+
+              <div class="chat-system">канал закрыт пользователем · ключ ротирован</div>
+
+            </div>
+          </section>
+
+        </main>
+      </div>
+
+      <p class="muted mt-3" style="font-size: 12px;">
+        <em>Материал приобщён к делу ВР-Z31-044 как контекстное приложение.
+        Способ получения и идентификация устройства &mdash; см.
+        <span class="redacted">██████████████████</span>. Доступ ограничен LVL 4+.
+        Дальнейшее распространение &mdash; запрещено.</em>
+      </p>
+
+      <p class="faint" style="margin-top: 32px; font-size: 12px;">
+        — приложение к делу: <span class="gold">ВР-Z31-044 / L-01</span><br/>
+        — статус: <span class="gold">архив · LVL 4+ · LEAKED · не санкционировано</span>
+      </p>
+
+    </article>
+
+    <div class="report-footer">
+      <span>досье · ОВР / Зона-31 · ВР-Z31-044 / L-01</span>
+      <span class="motto">Обезопасить. Удержать. Сохранить.</span>
+    </div>
+
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="../../nav.js"></script>
+  <script>
+    // переключение чатов
+    (function () {
+      const app = document.getElementById('chatApp');
+      const contacts = app.querySelectorAll('.chat-contact');
+      const windows = app.querySelectorAll('.chat-window');
+      const backBtns = app.querySelectorAll('[data-back]');
+
+      function show(id) {
+        contacts.forEach(c => c.classList.toggle('is-active', c.dataset.chat === id));
+        windows.forEach(w => w.classList.toggle('is-active', w.id === 'chat-' + id));
+        app.classList.add('is-chat-open');
+        const body = app.querySelector('.chat-window.is-active .chat-window__body');
+        if (body) body.scrollTop = body.scrollHeight;
+      }
+
+      contacts.forEach(c => c.addEventListener('click', () => show(c.dataset.chat)));
+      backBtns.forEach(b => b.addEventListener('click', () => app.classList.remove('is-chat-open')));
+
+      // на десктопе при первом открытии скроллим вниз активный чат
+      window.addEventListener('load', () => {
+        const body = app.querySelector('.chat-window.is-active .chat-window__body');
+        if (body) body.scrollTop = body.scrollHeight;
+      });
+    })();
+  </script>
+</body>
+</html>
