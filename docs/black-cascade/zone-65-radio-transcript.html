@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Расшифровка радиоперехвата · Зона-65 // BLACK CASCADE</title>
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+<body>
+  <div id="site-nav"></div>
+
+  <main class="report">
+
+    <a href="index.html" class="report__back">&larr; назад в BLACK CASCADE</a>
+
+    <!-- HEADER -->
+    <header class="report-header">
+      <div class="report-header__brand">Фонд SCP</div>
+      <div class="report-header__sub">Расшифровка перехвата · служба связи МОГ Ню-7</div>
+
+      <div class="report-classify">
+        <div>
+          <div class="label">допуск</div>
+          <div class="value">LEVEL 4+</div>
+        </div>
+        <div>
+          <div class="label">канал</div>
+          <div class="value">N7-COMSEC · TAC-1 / TAC-3</div>
+        </div>
+        <div>
+          <div class="label">статус</div>
+          <div class="value critical">КРИТИЧЕСКИЙ &middot; ПРИЛОЖЕНИЕ</div>
+        </div>
+      </div>
+
+      <div class="report-subtitle">приложение к полевому отчёту кап. Волькера</div>
+      <h1 class="report-title">Радиоперехват Зоны-65<br/>23:28 &mdash; 23:58 UTC</h1>
+      <div class="report-subtitle">операция: BLACK CASCADE &middot; 14.05.2026</div>
+
+      <div class="report-meta">
+        <div><span class="k">расшифровал</span><span class="v">сл. связи Ню-7 · М. Хоэн</span></div>
+        <div><span class="k">источник</span><span class="v">бортовые регистраторы + ретранслятор Helix-2</span></div>
+        <div><span class="k">каналы</span><span class="v">TAC-1 (cmd), TAC-3 (ОПС), EMG</span></div>
+        <div><span class="k">длительность</span><span class="v">29 мин 47 сек</span></div>
+        <div><span class="k">потери записи</span><span class="v">~12% &mdash; помехи, повреждения</span></div>
+        <div><span class="k">верифицировал</span><span class="v">кап. А. Волькер</span></div>
+      </div>
+    </header>
+
+    <!-- BODY -->
+    <article class="report-body">
+
+      <div class="callout callout--danger">
+        <strong>Преамбула.</strong> Расшифровка сохраняет реальную последовательность
+        и характер переговоров. Часть фрагментов восстановлена по обрывкам, часть
+        утрачена окончательно. Имена операторов соответствуют
+        <a href="zone-65-casualty-list.html">сводному реестру потерь</a>.
+        Текст содержит обсценную лексику в исходнике; цензура применена выборочно
+        в соответствии с регламентом ОВР о публикации полевых материалов.
+        <strong>Документ читать без перерыва не рекомендуется.</strong>
+      </div>
+
+      <h2>I. Контакт &mdash; первая фаза</h2>
+      <p class="muted">Канал TAC-1, командный. 23:28 &mdash; 23:34 UTC. Внешний периметр.</p>
+
+      <div class="radio-log">
+        <div class="radio-log__head">
+          <span><span class="dot"></span>TAC-1 · cmd · 23:28 UTC</span>
+          <span>фаза 1 · контакт</span>
+        </div>
+        <div class="radio-log__body">
+
+          <div class="radio-row radio-row--cmd">
+            <span class="t">23:28:04</span>
+            <span class="src"><span class="id">N7-0001</span> · <span class="cs">«Волк»</span></span>
+            <span class="msg"><span class="cmd">Командиры отделений, доклад.</span> Спокойно, по очереди.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:28:09</span>
+            <span class="src"><span class="id">N7-0002</span> · <span class="cs">«Лом»</span></span>
+            <span class="msg">ОПС-1 на позиции. P-2 чисто. Тепловизор фиксирует движение в лесу, дистанция девятьсот, мелкое, идентифицировать не могу.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:28:17</span>
+            <span class="src"><span class="id">N7-0014</span> · <span class="cs">«Резак»</span></span>
+            <span class="msg">ОПС-4 на позиции. P-4 спокойно. Снайперы держат сектор.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:28:22</span>
+            <span class="src"><span class="id">N7-0006</span> · <span class="cs">«Тень»</span></span>
+            <span class="msg">ОПС-2 в коридорах. Подуровень-3, два звена, проход держим.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:28:31</span>
+            <span class="src"><span class="id">N7-0004</span> · <span class="cs">«Колокол»</span></span>
+            <span class="msg">Диспетчерская подтверждает. Камеры внешнего кольца &mdash; <em>выпадают</em>. P-2 сектор Восток-1, нет картинки. Не реагирует диагностика.</span>
+          </div>
+
+          <div class="radio-row radio-row--cmd">
+            <span class="t">23:28:38</span>
+            <span class="src"><span class="id">N7-0001</span> · <span class="cs">«Волк»</span></span>
+            <span class="msg"><span class="cmd">«Колокол», скажи СБ &mdash; пусть дублируют пост наблюдения вручную.</span> «Лом», подсветка по сектору, посмотри что там.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:29:02</span>
+            <span class="src"><span class="id">N7-0102</span> · <span class="cs">«Янис»</span></span>
+            <span class="msg">Подсветка дана. Лес. Туман. Не вижу &mdash; стоп. Шесть-семь силуэтов, дистанция шестьсот, движутся к нам. Бронежилеты. Это <em>люди</em>.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:29:11</span>
+            <span class="src"><span class="id">N7-0107</span> · <span class="cs">«Магда»</span></span>
+            <span class="msg">Подтверждаю. Видела одного в прицел. Тяжёлая броня. Не наш профиль.</span>
+          </div>
+
+          <div class="radio-row radio-row--cmd">
+            <span class="t">23:29:18</span>
+            <span class="src"><span class="id">N7-0001</span> · <span class="cs">«Волк»</span></span>
+            <span class="msg"><span class="cmd">Контакт. Объявляю красный.</span> «Колокол» &mdash; сирена, всем уровням. ОПС-1 &mdash; огонь по готовности, держать дистанцию.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:29:24</span>
+            <span class="src"><span class="id">N7-0102</span> · <span class="cs">«Янис»</span></span>
+            <span class="msg">Принял. Огонь.</span>
+          </div>
+
+          <div class="radio-row radio-row--static">
+            <span class="t">23:29:27</span>
+            <span class="src">[фон]</span>
+            <span class="msg">[стрельба, одиночные, затем автоматический огонь, нарастает]</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:29:41</span>
+            <span class="src"><span class="id">N7-0107</span> · <span class="cs">«Магда»</span></span>
+            <span class="msg">Двое легли. Остальные <em>не падают</em>. Я попадаю &mdash; они не падают.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:29:48</span>
+            <span class="src"><span class="id">N7-0102</span> · <span class="cs">«Янис»</span></span>
+            <span class="msg">У них что-то на торсах. Свечение под бронёй. <em>Кто-нибудь видел такое?</em></span>
+          </div>
+
+          <div class="radio-row radio-row--cmd">
+            <span class="t">23:29:55</span>
+            <span class="src"><span class="id">N7-0001</span> · <span class="cs">«Волк»</span></span>
+            <span class="msg"><span class="cmd">«Кузнец», ОПС-3 на P-2, поддержка.</span> Бронебойные. Сейчас.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:30:01</span>
+            <span class="src"><span class="id">N7-0011</span> · <span class="cs">«Кузнец»</span></span>
+            <span class="msg">ОПС-3 пошли. Семь минут.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:30:14</span>
+            <span class="src"><span class="id">N7-0014</span> · <span class="cs">«Резак»</span></span>
+            <span class="msg">«Волк», P-4. У меня тоже. <em>Тоже</em>. Десять плюс, выходят из лесополосы. И один большой. <span class="scream">Очень большой.</span></span>
+          </div>
+
+          <div class="radio-row radio-row--cmd">
+            <span class="t">23:30:19</span>
+            <span class="src"><span class="id">N7-0001</span> · <span class="cs">«Волк»</span></span>
+            <span class="msg"><span class="cmd">Большой &mdash; это что?</span></span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:30:22</span>
+            <span class="src"><span class="id">N7-0014</span> · <span class="cs">«Резак»</span></span>
+            <span class="msg">Я не знаю что это. Не танк. Выше танка. Идёт.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:30:28</span>
+            <span class="src"><span class="id">N7-0004</span> · <span class="cs">«Колокол»</span></span>
+            <span class="msg">«Волк», ещё камеры. P-3 &mdash; нет. P-5 &mdash; нет. Восточные коридоры &mdash; <em>нет</em>. У нас слепой объект.</span>
+          </div>
+
+          <div class="radio-row radio-row--cmd">
+            <span class="t">23:30:36</span>
+            <span class="src"><span class="id">N7-0001</span> · <span class="cs">«Волк»</span></span>
+            <span class="msg"><span class="cmd">Это не контакт. Это штурм. «Колокол» &mdash; экстренный код, все каналы.</span></span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:30:42</span>
+            <span class="src"><span class="id">N7-0004</span> · <span class="cs">«Колокол»</span></span>
+            <span class="msg">Передаю. <em>В эфир.</em></span>
+          </div>
+        </div>
+      </div>
+
+      <h2>II. Эскалация &mdash; периметр рвётся</h2>
+      <p class="muted">Все каналы. 23:34 &mdash; 23:42 UTC. Прорыв P-2, P-4, потеря восточных коридоров.</p>
+
+      <div class="radio-log">
+        <div class="radio-log__head">
+          <span><span class="dot"></span>TAC-1 + TAC-3 · все каналы · 23:34 UTC</span>
+          <span>фаза 2 · прорыв</span>
+        </div>
+        <div class="radio-log__body">
+
+          <div class="radio-row">
+            <span class="t">23:34:11</span>
+            <span class="src"><span class="id">N7-0102</span> · <span class="cs">«Янис»</span></span>
+            <span class="msg">P-2 &mdash; <span class="scream">они в окопе!</span> Они в моём окопе! Туар! Туар, отступай!</span>
+          </div>
+
+          <div class="radio-row radio-row--scream">
+            <span class="t">23:34:13</span>
+            <span class="src"><span class="id">N7-0103</span> · <span class="cs">«Туар»</span></span>
+            <span class="msg"><span class="scream">не успева&mdash;</span> <span class="cut">[сигнал прерван]</span></span>
+          </div>
+
+          <div class="radio-row radio-row--static">
+            <span class="t">23:34:15</span>
+            <span class="src">[помехи]</span>
+            <span class="msg">[крик женский, без идентификации, ~2 сек, обрезан]</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:34:19</span>
+            <span class="src"><span class="id">N7-0107</span> · <span class="cs">«Магда»</span></span>
+            <span class="msg">Туар лёг. Йоэль лёг. Линда не двигается. <em>Лом, ты слышишь меня?</em> «Лом», ответь.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:34:25</span>
+            <span class="src"><span class="id">N7-0002</span> · <span class="cs">«Лом»</span></span>
+            <span class="msg">Слышу. Я здесь. Стефан рядом, Расс закрепился, держим левый фланг. Магда &mdash; работай по дальним, ближних мы.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:34:31</span>
+            <span class="src"><span class="id">N7-0011</span> · <span class="cs">«Кузнец»</span></span>
+            <span class="msg">ОПС-3 на P-2. Бронебойные в работе. Беринг ведёт первое звено. Эфраим &mdash; пулемёт.</span>
+          </div>
+
+          <div class="radio-row radio-row--static">
+            <span class="t">23:34:38</span>
+            <span class="src">[фон]</span>
+            <span class="msg">[грохот, серия взрывов, тяжёлое вооружение &mdash; не наш калибр]</span>
+          </div>
+
+          <div class="radio-row radio-row--scream">
+            <span class="t">23:34:44</span>
+            <span class="src"><span class="id">N7-0014</span> · <span class="cs">«Резак»</span></span>
+            <span class="msg"><span class="scream">«ВОЛК», P-4 РУШИТСЯ! У МЕНЯ НЕ ОСТАНОВИТЬ ЭТУ ДРЯНЬ!</span> Гранатомёт молчит! Ничего не делает!</span>
+          </div>
+
+          <div class="radio-row radio-row--cmd">
+            <span class="t">23:34:49</span>
+            <span class="src"><span class="id">N7-0001</span> · <span class="cs">«Волк»</span></span>
+            <span class="msg"><span class="cmd">«Резак», отходи на запасную. Не геройствуй. Артиллерия на сектор &mdash; запрос.</span></span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:34:53</span>
+            <span class="src"><span class="id">N7-0004</span> · <span class="cs">«Колокол»</span></span>
+            <span class="msg">Запрос пошёл. Helix-2 в воздухе, две минуты до выхода на цель.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:35:08</span>
+            <span class="src"><span class="id">N7-0006</span> · <span class="cs">«Тень»</span></span>
+            <span class="msg">«Волк», у меня внутри проблема. Гермоворота 4-Е &mdash; <em>они открыты</em>. Кто-то открыл изнутри. Я там не работал, режим был включён.</span>
+          </div>
+
+          <div class="radio-row radio-row--cmd">
+            <span class="t">23:35:13</span>
+            <span class="src"><span class="id">N7-0001</span> · <span class="cs">«Волк»</span></span>
+            <span class="msg"><span class="cmd">Кто открыл?</span></span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:35:16</span>
+            <span class="src"><span class="id">N7-0006</span> · <span class="cs">«Тень»</span></span>
+            <span class="msg">Не знаю. Журнал не пишет. Уже не пишет ничего.</span>
+          </div>
+
+          <div class="radio-row radio-row--static">
+            <span class="t">23:35:21</span>
+            <span class="src">[фон]</span>
+            <span class="msg">[серия выстрелов, ближняя, ~10 сек, нарастает, перекрывает голоса]</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:35:34</span>
+            <span class="src"><span class="id">N7-0006</span> · <span class="cs">«Тень»</span></span>
+            <span class="msg">Они через 4-Е заходят. Они <em>знали</em> что 4-Е будут открыты. Это не случайно.</span>
+          </div>
+
+          <div class="radio-row radio-row--cmd">
+            <span class="t">23:35:40</span>
+            <span class="src"><span class="id">N7-0001</span> · <span class="cs">«Волк»</span></span>
+            <span class="msg"><span class="cmd">«Тень», держи коридор B-19. ОПС-2 на B-19, любой ценой. ОПС-3 &mdash; на тебе арсенал A. «Кузнец», слышишь?</span></span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:35:44</span>
+            <span class="src"><span class="id">N7-0011</span> · <span class="cs">«Кузнец»</span></span>
+            <span class="msg">Слышу. Иду в арсенал. <em>Это не обычные ПХ.</em> Они работают как мы.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:35:51</span>
+            <span class="src"><span class="id">N7-0202</span> · <span class="cs">«Карел»</span></span>
+            <span class="msg">ОПС-2 на B-19. Дверь видим. Я Самир, Эмили, Беатрис, Айя, Бэйт. Хейкки минирует пол.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:35:58</span>
+            <span class="src"><span class="id">N7-0827</span> · <span class="cs">«Бэйт»</span></span>
+            <span class="msg">Карел, бодикам пишет. Если что &mdash; будет запись.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:36:03</span>
+            <span class="src"><span class="id">N7-0202</span> · <span class="cs">«Карел»</span></span>
+            <span class="msg">Не «если что». <em>Когда</em>. Снимай всё.</span>
+          </div>
+
+          <div class="radio-row radio-row--static">
+            <span class="t">23:36:18</span>
+            <span class="src">[фон]</span>
+            <span class="msg">[взрыв среднего калибра, ближний, эхо в коридоре]</span>
+          </div>
+
+          <div class="radio-row radio-row--scream">
+            <span class="t">23:36:22</span>
+            <span class="src"><span class="id">N7-0207</span> · <span class="cs">«Хейкки»</span></span>
+            <span class="msg"><span class="scream">МИНУ СОРВАЛО! ЭТО НЕ ОТ МЕНЯ!</span> Они <em>знают</em> где мины!</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:36:28</span>
+            <span class="src"><span class="id">N7-0107</span> · <span class="cs">«Магда»</span></span>
+            <span class="msg">«Волк». Я не вижу Линду уже четыре минуты. Стефан тоже не отвечает. <em>Я одна осталась на правом фланге.</em></span>
+          </div>
+
+          <div class="radio-row radio-row--cmd">
+            <span class="t">23:36:34</span>
+            <span class="src"><span class="id">N7-0001</span> · <span class="cs">«Волк»</span></span>
+            <span class="msg"><span class="cmd">Магда, уходи. Сейчас. Туннель к точке Альфа. Не оборачивайся.</span></span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:36:39</span>
+            <span class="src"><span class="id">N7-0107</span> · <span class="cs">«Магда»</span></span>
+            <span class="msg">Принято.</span>
+          </div>
+
+          <div class="radio-row radio-row--static">
+            <span class="t">23:37:11</span>
+            <span class="src">[помехи]</span>
+            <span class="msg">[пауза 32 сек, фоновый огонь, голосов нет]</span>
+          </div>
+
+          <div class="radio-row radio-row--dead">
+            <span class="t">23:38:01</span>
+            <span class="src"><span class="id">N7-0107</span> · <span class="cs">«Магда»</span></span>
+            <span class="msg">больше не выйдет на связь.</span>
+          </div>
+        </div>
+      </div>
+
+      <h2>III. Глубина &mdash; «оно» снаружи</h2>
+      <p class="muted">TAC-1 + борт. 23:42 &mdash; 23:51 UTC. Первый контакт с колоссальной сущностью.</p>
+
+      <div class="radio-log">
+        <div class="radio-log__head">
+          <span><span class="dot"></span>TAC-1 + AIR · 23:42 UTC</span>
+          <span>фаза 3 · колосс</span>
+        </div>
+        <div class="radio-log__body">
+
+          <div class="radio-row">
+            <span class="t">23:42:04</span>
+            <span class="src"><span class="id">HELIX-2</span> · <span class="cs">пилот</span></span>
+            <span class="msg">Helix-2 на цели. Запрашиваю подсветку P-4.</span>
+          </div>
+
+          <div class="radio-row radio-row--cmd">
+            <span class="t">23:42:08</span>
+            <span class="src"><span class="id">N7-0001</span> · <span class="cs">«Волк»</span></span>
+            <span class="msg"><span class="cmd">Подсветки нет. P-4 не отвечает уже шесть минут. Работай по визуальной обстановке. Цель &mdash; что-то крупное к северо-востоку.</span></span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:42:18</span>
+            <span class="src"><span class="id">HELIX-2</span> · <span class="cs">пилот</span></span>
+            <span class="msg">Визуально. Видим. <em>Это что...</em></span>
+          </div>
+
+          <div class="radio-row radio-row--static">
+            <span class="t">23:42:22</span>
+            <span class="src">[помехи]</span>
+            <span class="msg">[несколько секунд молчания на канале]</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:42:31</span>
+            <span class="src"><span class="id">HELIX-2</span> · <span class="cs">пилот</span></span>
+            <span class="msg">«Волк», объект &mdash; не танк. Объект &mdash; <em>живой</em>. Высота приблизительно сто пятьдесят метров. Двести. Я не знаю. Он <em>больше</em>, чем мне надо его измерять.</span>
+          </div>
+
+          <div class="radio-row radio-row--cmd">
+            <span class="t">23:42:38</span>
+            <span class="src"><span class="id">N7-0001</span> · <span class="cs">«Волк»</span></span>
+            <span class="msg"><span class="cmd">Helix-2, классификация?</span></span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:42:42</span>
+            <span class="src"><span class="id">HELIX-2</span> · <span class="cs">пилот</span></span>
+            <span class="msg">Не в реестре. Дайте мне минуту, я <em>не знаю что это такое</em>. Идёт на нас.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:42:48</span>
+            <span class="src"><span class="id">HELIX-3</span> · <span class="cs">пилот</span></span>
+            <span class="msg">Helix-3 подтверждает визуально. Тепловая сигнатура зашкаливает. Не могу удержать на дисплее.</span>
+          </div>
+
+          <div class="radio-row radio-row--cmd">
+            <span class="t">23:42:55</span>
+            <span class="src"><span class="id">N7-0001</span> · <span class="cs">«Волк»</span></span>
+            <span class="msg"><span class="cmd">Эта-5 в эфир. Все борта &mdash; в эфир. Работа по объекту, тяжёлое, что есть.</span></span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:43:02</span>
+            <span class="src"><span class="id">ETA-5-1</span> · <span class="cs">борт</span></span>
+            <span class="msg">Эта-5 в воздухе. Ракеты в работе. Цель... <em>цель не реагирует</em>.</span>
+          </div>
+
+          <div class="radio-row radio-row--static">
+            <span class="t">23:43:18</span>
+            <span class="src">[фон]</span>
+            <span class="msg">[серия пусков, удары, ~22 сек]</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:43:44</span>
+            <span class="src"><span class="id">ETA-5-1</span> · <span class="cs">борт</span></span>
+            <span class="msg">Прямые попадания, шесть из шести. Объект продолжает движение. <em>Раны затягиваются</em>. Я это сейчас вижу. На моих глазах.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:43:52</span>
+            <span class="src"><span class="id">HELIX-2</span> · <span class="cs">пилот</span></span>
+            <span class="msg">«Волк». У меня сейчас приборы скачут. Электроника &mdash; <em>он излучает что-то</em>.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:43:58</span>
+            <span class="src"><span class="id">N7-0001</span> · <span class="cs">«Волк»</span></span>
+            <span class="msg">Helix-2, держи дистанцию. Не входи в зону. Сними максимум. Это нужно центру.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:44:07</span>
+            <span class="src"><span class="id">HELIX-2</span> · <span class="cs">пилот</span></span>
+            <span class="msg">Принято. Камеры пишут. <em>Иисус</em>...</span>
+          </div>
+
+          <div class="radio-row radio-row--static">
+            <span class="t">23:44:14</span>
+            <span class="src">[фон]</span>
+            <span class="msg">[длинный низкий звук, не идентифицирован, ~8 сек, перебивает канал, неэлектрический]</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:44:31</span>
+            <span class="src"><span class="id">N7-0006</span> · <span class="cs">«Тень»</span></span>
+            <span class="msg">«Волк», у меня здесь стены трясутся. Я под землёй, и они трясутся.</span>
+          </div>
+
+          <div class="radio-row radio-row--cmd">
+            <span class="t">23:44:36</span>
+            <span class="src"><span class="id">N7-0001</span> · <span class="cs">«Волк»</span></span>
+            <span class="msg"><span class="cmd">Эта-5, продолжать сдерживание. «Тень», твоя задача &mdash; держать B-19 для отхода. Не уходи, пока не пройдут все.</span></span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:44:42</span>
+            <span class="src"><span class="id">N7-0006</span> · <span class="cs">«Тень»</span></span>
+            <span class="msg">Все? <em>Какие все?</em> Кто остался?</span>
+          </div>
+
+          <div class="radio-row radio-row--cmd">
+            <span class="t">23:44:48</span>
+            <span class="src"><span class="id">N7-0001</span> · <span class="cs">«Волк»</span></span>
+            <span class="msg">Кто сможет.</span>
+          </div>
+        </div>
+      </div>
+
+      <h2>IV. B-19 &mdash; последняя запись Уокера</h2>
+      <p class="muted">TAC-3 · 23:46 UTC. Коридор B-19. Точка с нагрудной камеры ATT-02 в полевом отчёте.</p>
+
+      <div class="radio-log">
+        <div class="radio-log__head">
+          <span><span class="dot"></span>TAC-3 · 23:46 UTC</span>
+          <span>фаза 4 · коридор B-19</span>
+        </div>
+        <div class="radio-log__body">
+
+          <div class="radio-row">
+            <span class="t">23:46:02</span>
+            <span class="src"><span class="id">N7-0202</span> · <span class="cs">«Карел»</span></span>
+            <span class="msg">B-19, доклад по составу. Хейкки &mdash; нет. Самир &mdash; ранен, держит правый угол. Эмили &mdash; со мной. Беатрис &mdash; со мной. Айя &mdash; снайпит из ниши. Бэйт &mdash; в дверях.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:46:09</span>
+            <span class="src"><span class="id">N7-0827</span> · <span class="cs">«Бэйт»</span></span>
+            <span class="msg">Карел, через дверь слышно дыхание. Не один. Несколько.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:46:12</span>
+            <span class="src"><span class="id">N7-0202</span> · <span class="cs">«Карел»</span></span>
+            <span class="msg">Жди. Не открывай. Жди.</span>
+          </div>
+
+          <div class="radio-row radio-row--static">
+            <span class="t">23:46:17</span>
+            <span class="src">[фон]</span>
+            <span class="msg">[треск металла, дверь под давлением]</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:46:19</span>
+            <span class="src"><span class="id">N7-0827</span> · <span class="cs">«Бэйт»</span></span>
+            <span class="msg">Дверь идёт. <em>Дверь идёт, ребят</em>.</span>
+          </div>
+
+          <div class="radio-row radio-row--scream">
+            <span class="t">23:46:22</span>
+            <span class="src"><span class="id">N7-0202</span> · <span class="cs">«Карел»</span></span>
+            <span class="msg"><span class="scream">ОГОНЬ!</span></span>
+          </div>
+
+          <div class="radio-row radio-row--static">
+            <span class="t">23:46:23</span>
+            <span class="src">[фон]</span>
+            <span class="msg">[плотный автоматический огонь, ~6 сек, крик мужской, не идентифицирован]</span>
+          </div>
+
+          <div class="radio-row radio-row--scream">
+            <span class="t">23:46:31</span>
+            <span class="src"><span class="id">N7-0208</span> · <span class="cs">«Айя»</span></span>
+            <span class="msg"><span class="scream">САМИР УПАЛ! САМИР!</span></span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:46:35</span>
+            <span class="src"><span class="id">N7-0827</span> · <span class="cs">«Бэйт»</span></span>
+            <span class="msg">Карел &mdash; <em>они в гермокостюмах?</em> Они в наших гермокостюмах.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:46:39</span>
+            <span class="src"><span class="id">N7-0202</span> · <span class="cs">«Карел»</span></span>
+            <span class="msg">Это не наши. Стреляй. <em>Просто стреляй</em>.</span>
+          </div>
+
+          <div class="radio-row radio-row--static">
+            <span class="t">23:46:42</span>
+            <span class="src">[фон]</span>
+            <span class="msg">[огонь, ~9 сек, рев в коридоре, эхо]</span>
+          </div>
+
+          <div class="radio-row radio-row--scream">
+            <span class="t">23:46:54</span>
+            <span class="src"><span class="id">N7-0204</span> · <span class="cs">«Эмили»</span></span>
+            <span class="msg"><span class="scream">КАРЕЛ! КАРЕЛ ВНИЗУ!</span></span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:46:58</span>
+            <span class="src"><span class="id">N7-0827</span> · <span class="cs">«Бэйт»</span></span>
+            <span class="msg">Беатрис, прикрой. Я к Карелу.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:47:02</span>
+            <span class="src"><span class="id">N7-0206</span> · <span class="cs">«Беатрис»</span></span>
+            <span class="msg">Иди. У меня магазин.</span>
+          </div>
+
+          <div class="radio-row radio-row--static">
+            <span class="t">23:47:11</span>
+            <span class="src">[фон]</span>
+            <span class="msg">[стрельба продолжается ~22 сек]</span>
+          </div>
+
+          <div class="radio-row radio-row--scream">
+            <span class="t">23:47:34</span>
+            <span class="src"><span class="id">N7-0827</span> · <span class="cs">«Бэйт»</span></span>
+            <span class="msg"><span class="scream">КАРЕЛ ЖИВ!</span> Карел жив, держит. У меня кончились бронебойные, осталось обычные.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:47:41</span>
+            <span class="src"><span class="id">N7-0202</span> · <span class="cs">«Карел»</span></span>
+            <span class="msg">[слабо] Бэйт, отходи. Не выйдешь, если задержишься.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:47:45</span>
+            <span class="src"><span class="id">N7-0827</span> · <span class="cs">«Бэйт»</span></span>
+            <span class="msg">Я тебя не оставлю.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:47:48</span>
+            <span class="src"><span class="id">N7-0202</span> · <span class="cs">«Карел»</span></span>
+            <span class="msg">Это не вопрос.</span>
+          </div>
+
+          <div class="radio-row radio-row--static">
+            <span class="t">23:47:52</span>
+            <span class="src">[фон]</span>
+            <span class="msg">[взрыв, ближний, ~3 сек, треск канала]</span>
+          </div>
+
+          <div class="radio-row radio-row--dead">
+            <span class="t">23:47:55</span>
+            <span class="src"><span class="id">N7-0827</span> · <span class="cs">«Бэйт»</span></span>
+            <span class="msg">канал заглох.</span>
+          </div>
+
+          <div class="radio-divider">— конец записи нагрудной камеры BODYCAM-17 —</div>
+
+        </div>
+      </div>
+
+      <h2>V. Распад &mdash; последние пятнадцать минут</h2>
+      <p class="muted">Все каналы. 23:48 &mdash; 23:58 UTC. Эвакуация Волькера. Голос «Колокола» гаснет последним.</p>
+
+      <div class="radio-log">
+        <div class="radio-log__head">
+          <span><span class="dot"></span>TAC-1 + EMG · 23:48 UTC</span>
+          <span>фаза 5 · распад</span>
+        </div>
+        <div class="radio-log__body">
+
+          <div class="radio-row">
+            <span class="t">23:48:14</span>
+            <span class="src"><span class="id">N7-0001</span> · <span class="cs">«Волк»</span></span>
+            <span class="msg">Кто на связи. Доклад. Поименно.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:48:21</span>
+            <span class="src"><span class="id">N7-0004</span> · <span class="cs">«Колокол»</span></span>
+            <span class="msg">Я. Диспетчерская.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:48:24</span>
+            <span class="src"><span class="id">N7-0006</span> · <span class="cs">«Тень»</span></span>
+            <span class="msg">Я. Подуровень-3. Один. Со мной двое из ОПС-2, ранены.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:48:30</span>
+            <span class="src"><span class="id">N7-0011</span> · <span class="cs">«Кузнец»</span></span>
+            <span class="msg">Я. Арсенал A. Беринг и Воло легли. У меня Андерс, Йонатан. Ещё пять минут.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:48:36</span>
+            <span class="src"><span class="id">N7-0002</span> · <span class="cs">«Лом»</span></span>
+            <span class="msg">Я. P-2. Расс ушёл, я не знаю куда. Один. <em>Один.</em></span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:48:41</span>
+            <span class="src"><span class="id">N7-0014</span> · <span class="cs">«Резак»</span></span>
+            <span class="msg">[голос разбит] Я. P-4. Не могу встать. Слышу всё.</span>
+          </div>
+
+          <div class="radio-row radio-row--silence">
+            <span class="t">23:48:48</span>
+            <span class="src"></span>
+            <span class="msg">— тишина 11 секунд —</span>
+          </div>
+
+          <div class="radio-row radio-row--cmd">
+            <span class="t">23:49:00</span>
+            <span class="src"><span class="id">N7-0001</span> · <span class="cs">«Волк»</span></span>
+            <span class="msg"><span class="cmd">Слышали все. Кто может двигаться &mdash; на эвакуационные туннели Бета и Гамма. Бортов осталось два. Точка сбора &mdash; высота 5170.</span></span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:49:06</span>
+            <span class="src"><span class="id">N7-0014</span> · <span class="cs">«Резак»</span></span>
+            <span class="msg">«Волк». Не приходи за мной. Иди.</span>
+          </div>
+
+          <div class="radio-row radio-row--cmd">
+            <span class="t">23:49:11</span>
+            <span class="src"><span class="id">N7-0001</span> · <span class="cs">«Волк»</span></span>
+            <span class="msg">«Резак», подтверди код.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:49:14</span>
+            <span class="src"><span class="id">N7-0014</span> · <span class="cs">«Резак»</span></span>
+            <span class="msg">[пауза 4 сек] Подтверждаю. EMERALD-7.</span>
+          </div>
+
+          <div class="radio-row radio-row--silence">
+            <span class="t">23:49:21</span>
+            <span class="src"></span>
+            <span class="msg">— тишина 9 секунд —</span>
+          </div>
+
+          <div class="radio-row radio-row--dead">
+            <span class="t">23:49:33</span>
+            <span class="src"><span class="id">N7-0014</span> · <span class="cs">«Резак»</span></span>
+            <span class="msg">больше не отвечает.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:50:14</span>
+            <span class="src"><span class="id">N7-0011</span> · <span class="cs">«Кузнец»</span></span>
+            <span class="msg">«Волк», арсенал не удержим. Заминирую вход и пойду через Бета. С Андерсом и Йонатаном.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:50:22</span>
+            <span class="src"><span class="id">N7-0001</span> · <span class="cs">«Волк»</span></span>
+            <span class="msg">«Кузнец», прими. Жду на Бета.</span>
+          </div>
+
+          <div class="radio-row radio-row--static">
+            <span class="t">23:50:48</span>
+            <span class="src">[фон]</span>
+            <span class="msg">[ближний взрыв, ~5 сек, и через 18 сек &mdash; ещё один, более глубокий]</span>
+          </div>
+
+          <div class="radio-row radio-row--dead">
+            <span class="t">23:51:12</span>
+            <span class="src"><span class="id">N7-0011</span> · <span class="cs">«Кузнец»</span></span>
+            <span class="msg">больше не отвечает.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:51:24</span>
+            <span class="src"><span class="id">N7-0004</span> · <span class="cs">«Колокол»</span></span>
+            <span class="msg">«Волк». Я остаюсь в диспетчерской. У меня ещё аварийная связь, центр должен слышать.</span>
+          </div>
+
+          <div class="radio-row radio-row--cmd">
+            <span class="t">23:51:30</span>
+            <span class="src"><span class="id">N7-0001</span> · <span class="cs">«Волк»</span></span>
+            <span class="msg"><span class="cmd">«Колокол», уходи со мной.</span></span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:51:33</span>
+            <span class="src"><span class="id">N7-0004</span> · <span class="cs">«Колокол»</span></span>
+            <span class="msg">Не могу. Кто-то должен передавать, пока кто-то слышит.</span>
+          </div>
+
+          <div class="radio-row radio-row--silence">
+            <span class="t">23:51:39</span>
+            <span class="src"></span>
+            <span class="msg">— тишина 13 секунд —</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:51:54</span>
+            <span class="src"><span class="id">N7-0001</span> · <span class="cs">«Волк»</span></span>
+            <span class="msg">Антония.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:51:57</span>
+            <span class="src"><span class="id">N7-0004</span> · <span class="cs">«Колокол»</span></span>
+            <span class="msg">Адриан, иди. Я скажу за всех.</span>
+          </div>
+
+          <div class="radio-row radio-row--static">
+            <span class="t">23:52:11</span>
+            <span class="src">[помехи]</span>
+            <span class="msg">[интенсивный электромагнитный шум, ~30 сек, частичная потеря канала]</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:53:02</span>
+            <span class="src"><span class="id">HELIX-2</span> · <span class="cs">пилот</span></span>
+            <span class="msg">«Волк» на борту. Подтверждаю. Поднимаемся.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:54:18</span>
+            <span class="src"><span class="id">N7-0004</span> · <span class="cs">«Колокол»</span></span>
+            <span class="msg">Центр, это Зона-65, передаёт оператор связи Куэвас. Объект потерян. Внешние сектора пали. Внутренние сектора пали. Командный состав <em>не подтверждён</em>, кроме Волькера.</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:55:01</span>
+            <span class="src"><span class="id">N7-0004</span> · <span class="cs">«Колокол»</span></span>
+            <span class="msg">Центр, это Куэвас. Подтверждение приёма?</span>
+          </div>
+
+          <div class="radio-row radio-row--silence">
+            <span class="t">23:55:08</span>
+            <span class="src"></span>
+            <span class="msg">— тишина 22 секунды —</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:55:33</span>
+            <span class="src"><span class="id">N7-0004</span> · <span class="cs">«Колокол»</span></span>
+            <span class="msg">Центр, это Куэвас. <em>Если кто-то меня слышит.</em></span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:56:14</span>
+            <span class="src"><span class="id">N7-0004</span> · <span class="cs">«Колокол»</span></span>
+            <span class="msg">Меня зовут Антония Куэвас. Если эту запись будут разбирать &mdash; передайте моей сестре, что я не успела ей позвонить в этот четверг. Я собиралась.</span>
+          </div>
+
+          <div class="radio-row radio-row--static">
+            <span class="t">23:56:42</span>
+            <span class="src">[фон]</span>
+            <span class="msg">[серия близких взрывов, диспетчерская, бетон, разрушение]</span>
+          </div>
+
+          <div class="radio-row">
+            <span class="t">23:57:11</span>
+            <span class="src"><span class="id">N7-0004</span> · <span class="cs">«Колокол»</span></span>
+            <span class="msg">Передаю последний доклад. Зона-65, оператор Куэвас. Я остаюсь на канале до конца. <em>Конец рядом.</em></span>
+          </div>
+
+          <div class="radio-row radio-row--silence">
+            <span class="t">23:57:28</span>
+            <span class="src"></span>
+            <span class="msg">— тишина 51 секунда —</span>
+          </div>
+
+          <div class="radio-row radio-row--dead">
+            <span class="t">23:58:41</span>
+            <span class="src"><span class="id">N7-0004</span> · <span class="cs">«Колокол»</span></span>
+            <span class="msg">канал закрыт. последний подтверждённый сигнал.</span>
+          </div>
+
+        </div>
+      </div>
+
+      <h2>Замечание расшифровщика</h2>
+      <p class="muted">
+        В материалах сохранено максимально близкое к оригиналу звучание. Грубые
+        обороты заменены только там, где это требовалось для понимания фразы.
+        Имена близких, упомянутые операторами в последние минуты &mdash; не цензурированы
+        по согласованию с кадровой службой.
+      </p>
+
+      <p>
+        Дополнительные материалы, относящиеся к указанным отрезкам:
+      </p>
+      <ul>
+        <li>Кадр с нагрудной камеры N7-0827 в 23:46:19 UTC &mdash; см. ATT-02 в
+          <a href="zone-65-field-report.html">полевом отчёте</a>.</li>
+        <li>Аэрофотосъёмка периметра в 23:47:12 UTC &mdash; см. ATT-01 там же.</li>
+        <li>Кадр с борта Helix-2 в 23:51:08 UTC &mdash; см. ATT-03 там же.</li>
+        <li>Поимённый список потерь &mdash; см.
+          <a href="zone-65-casualty-list.html">сводный реестр</a>.</li>
+      </ul>
+
+      <p class="faint" style="margin-top: 32px; font-size: 12px;">
+        — расшифровал: <span class="gold">сл. связи Ню-7 М. Хоэн</span><br/>
+        — верифицировал: <span class="gold">кап. А. Волькер</span><br/>
+        — приобщил к делу BLACK CASCADE: <span class="gold">сл. Н. Кросс, ОВР</span><br/>
+        — статус: <span class="gold">приложение к полевому отчёту · окончательная версия</span>
+      </p>
+
+    </article>
+
+    <div class="report-footer">
+      <span>досье · служба связи Ню-7 · BLACK CASCADE</span>
+      <span class="motto">Обезопасить. Удержать. Сохранить.</span>
+    </div>
+
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="../../nav.js"></script>
+</body>
+</html>

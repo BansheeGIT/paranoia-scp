@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Запросы СБ на проверку отдела разведки // Site-78</title>
+  <link rel="stylesheet" href="../../../style.css" />
+</head>
+<body>
+  <div id="site-nav"></div>
+
+  <main class="report">
+
+    <a href="index.html" class="report__back">&larr; назад в Site-78 «Warm House»</a>
+
+    <header class="report-header">
+      <div class="report-header__brand">Фонд SCP</div>
+      <div class="report-header__sub">Служба внутренней безопасности · отдел разведки</div>
+
+      <div class="report-classify">
+        <div><div class="label">допуск</div><div class="value">LEVEL 4+</div></div>
+        <div><div class="label">канал</div><div class="value">СВБ-IR · сводный</div></div>
+        <div><div class="label">статус</div><div class="value critical">ИСТОЧНИК УТЕЧКИ НЕ УСТАНОВЛЕН</div></div>
+      </div>
+
+      <div class="report-subtitle">сводка по проверке доступа к спискам агентов</div>
+      <h1 class="report-title">Кто видел список<br/>(и где они сейчас)</h1>
+      <div class="report-subtitle">материалы дела СВБ-IR-2024-06-014</div>
+
+      <div class="report-meta">
+        <div><span class="k">составил</span><span class="v">сл. СВБ Т. Райхельт</span></div>
+        <div><span class="k">дата сводки</span><span class="v">28.08.2024</span></div>
+        <div><span class="k">проверено</span><span class="v">23 сотрудника отдела разведки</span></div>
+        <div><span class="k">статус дела</span><span class="v">приостановлено за отсутствием улик</span></div>
+        <div><span class="k">пересмотр</span><span class="v">передан в ОВР (17.05.2026)</span></div>
+        <div><span class="k">приобщил</span><span class="v">сл. Н. Кросс, ОВР</span></div>
+      </div>
+    </header>
+
+    <article class="report-body">
+
+      <h2>I. Постановка</h2>
+      <p>
+        Список агентурной сети Site-78 на 15.06.2024 насчитывал <strong>~80</strong>
+        позиций. Полный список существовал в <strong>трёх копиях</strong>:
+      </p>
+      <ol>
+        <li>Оригинал у руководителя сети А. Дембеле (хранился в персональной
+          криптокамере Site-78).</li>
+        <li>Зашифрованная копия в архиве отдела разведки (доступ &mdash; через
+          специальные процедуры с двойной авторизацией).</li>
+        <li>Резервная копия в архиве Site-117 (см. ARC-04 в
+          <a href="../site-117-echo/data-loss-inventory.html">акте инвентаризации</a>).</li>
+      </ol>
+
+      <div class="callout callout--danger">
+        <strong>Ключевое.</strong> Копия в архиве Site-117 была скомпрометирована
+        04.06.2024 &mdash; за 11 суток до атаки на агентурную сеть. Это
+        <em>наиболее вероятный источник утечки</em>. Однако последовательность
+        ликвидаций 15.06.2024 (от самых старых контактов к новым) указывает,
+        что атакующий имел <strong>дополнительную</strong> информацию о
+        иерархии вербовки &mdash; информацию, которой в архивной копии
+        <em>не было</em>. Эта иерархия существовала только в голове
+        А. Дембеле и в его рабочей картотеке.
+      </div>
+
+      <h2>II. Кто имел доступ к рабочей картотеке</h2>
+
+      <div class="roster">
+        <div class="roster__head">
+          <div>ID</div>
+          <div>сотрудник</div>
+          <div>должность</div>
+          <div>пометка</div>
+          <div>статус</div>
+        </div>
+
+        <div class="roster__row">
+          <div class="id">IR-01</div>
+          <div class="nm">А. Дембеле</div>
+          <div class="ro">рук. сети Site-78</div>
+          <div class="nt">первоисточник</div>
+          <div class="st st--alive">в укрытии</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">IR-02</div>
+          <div class="nm"><span class="redacted">██████████████</span></div>
+          <div class="ro">зам. Дембеле</div>
+          <div class="nt">проверен — психо/полиграф пройдены</div>
+          <div class="st st--alive">в Зоне-31, перевод</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">IR-03</div>
+          <div class="nm"><span class="redacted">██████████████</span></div>
+          <div class="ro">аналитик-куратор Сахеля</div>
+          <div class="nt">погиб 15.06.2024 — на базе Site-78</div>
+          <div class="st st--kia">KIA</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">IR-04</div>
+          <div class="nm"><span class="redacted">██████████████</span></div>
+          <div class="ro">координатор-полевой</div>
+          <div class="nt">погибла 15.06.2024 — на базе Site-78</div>
+          <div class="st st--kia">KIA</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">IR-05</div>
+          <div class="nm"><span class="redacted">██████████████</span></div>
+          <div class="ro">архивариус отдела разведки</div>
+          <div class="nt">алиби (отпуск, Сейшелы), но имел технический доступ</div>
+          <div class="st st--alive">проверка не завершена</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">IR-06</div>
+          <div class="nm"><span class="redacted">██████████████</span></div>
+          <div class="ro">руководитель отдела разведки</div>
+          <div class="nt">алиби (Москва, встреча), детали не разглашаются</div>
+          <div class="st st--alive">проверка по решению Совета прекращена</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">IR-07&hellip;23</div>
+          <div class="nm">17 сотрудников</div>
+          <div class="ro">аналитики, кураторы, ассистенты</div>
+          <div class="nt">все проверены — без признаков утечки</div>
+          <div class="st st--alive">служат / переведены</div>
+        </div>
+      </div>
+
+      <h2>III. Что было сделано</h2>
+      <ol>
+        <li>Психологическая экспертиза всех 23 сотрудников отдела разведки
+          (выполнено июль 2024). Никто не показал признаков сокрытия.</li>
+        <li>Полиграф (выполнено август 2024). 22 из 23 &mdash; пройдено. Один (IR-05)
+          &mdash; результат «неопределённый» из-за фоновой тревожности; повторно
+          не приглашён.</li>
+        <li>Анализ доступов к рабочей картотеке за период с 01.01.2024.
+          Выявлены три обращения с нестандартным временем (поздняя ночь, без
+          явной служебной необходимости). Все три &mdash; со стороны сотрудников,
+          погибших 15.06.2024 на самой базе Site-78.</li>
+        <li>Запрос на расширенную проверку IR-05 и IR-06 &mdash;
+          <strong style="color: var(--danger);">отклонён</strong> на уровне Совета
+          О5 с пометкой <em>«нецелесообразно»</em>. Обоснование &mdash; в материалах
+          Совета (доступ за пределами LVL 4).</li>
+        <li>Дело СВБ-IR-2024-06-014 <strong>приостановлено</strong> 28.08.2024
+          с формулировкой <em>«источник утечки не установлен»</em>.</li>
+      </ol>
+
+      <h2>IV. Замечания по IR-06</h2>
+      <div class="callout">
+        <strong>Особо.</strong> Руководитель отдела разведки (IR-06) на момент
+        атаки находился на встрече <em>в Москве</em> с представителями
+        <span class="redacted">██████████████████████████</span>. Детали встречи &mdash;
+        закрыты на уровне Совета. Алиби &mdash; формально подтверждено. Однако:
+        проверить, действительно ли он находился в указанной точке физически
+        (а не выехал и не возвращался), <em>не представляется возможным</em>,
+        поскольку его передвижения за указанный период засекречены.
+      </div>
+
+      <p>
+        Это не обвинение. Это &mdash; констатация: <strong>верифицировать алиби IR-06
+        ОВР не имеет полномочий</strong>. Любая дальнейшая проверка может быть
+        проведена только Советом О5 в отношении самого Совета.
+      </p>
+
+      <h2>V. Возвращение к делу (17.05.2026)</h2>
+      <p>
+        ОВР возобновил рассмотрение материалов в связи с расследованием
+        BLACK CASCADE. Цель пересмотра &mdash; <em>не вина конкретного сотрудника</em>,
+        а паттерн: те же признаки, что на Сайте-117 и Сайте-37
+        (валидные доступы без журнальных следов), могли иметь место и здесь.
+        Прямых указаний на применение «Красного Света»
+        (см. <a href="../../../lore.html">RED LIGHT</a>) &mdash; нет, но и
+        опровержений тоже нет.
+      </p>
+
+      <div class="callout callout--danger">
+        <strong>Замечание Кросса.</strong> Я понимаю, что не могу проверить IR-06.
+        Я также понимаю, что человек, имеющий полномочия отказать мне в проверке
+        IR-06, &mdash; и есть тот, кого я в идеале должен был бы проверить
+        в самую первую очередь. Это записано здесь, чтобы кто-то после меня
+        это увидел. &mdash; <span class="gold">Н. Кросс, 17.05.2026</span>.
+      </div>
+
+      <p class="faint" style="margin-top: 32px; font-size: 12px;">
+        — составил: <span class="gold">сл. СВБ Т. Райхельт</span><br/>
+        — пересмотр: <span class="gold">сл. Н. Кросс, ОВР</span><br/>
+        — статус: <span class="gold">архив · LVL 4+ · приостановлено / в пересмотре</span>
+      </p>
+
+    </article>
+
+    <div class="report-footer">
+      <span>досье · СВБ-IR · BLACK CASCADE / Site-78</span>
+      <span class="motto">Обезопасить. Удержать. Сохранить.</span>
+    </div>
+
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="../../../nav.js"></script>
+</body>
+</html>

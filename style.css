@@ -1260,6 +1260,129 @@ section { padding: 72px 0; }
   letter-spacing: .3em;
 }
 
+/* ===== Radio log (расшифровка радиоперехвата) ===== */
+.radio-log {
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(176,74,47,0.04), transparent 30%),
+    var(--bg-2);
+  font-family: var(--f-mono);
+  margin: 16px 0 22px;
+}
+.radio-log__head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: var(--bg-3);
+  border-bottom: 1px solid var(--line);
+  font-size: 11px;
+  letter-spacing: .25em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+.radio-log__head .dot {
+  display: inline-block;
+  width: 8px; height: 8px;
+  background: var(--danger);
+  border-radius: 50%;
+  margin-right: 6px;
+  animation: pulse 1.6s ease-in-out infinite;
+}
+.radio-log__body {
+  padding: 16px 18px;
+}
+.radio-row {
+  display: grid;
+  grid-template-columns: 88px 150px 1fr;
+  gap: 10px 14px;
+  padding: 4px 0;
+  align-items: baseline;
+  font-size: 13px;
+  line-height: 1.55;
+}
+.radio-row .t {
+  color: var(--text-faint);
+  font-size: 11px;
+  letter-spacing: .08em;
+}
+.radio-row .src {
+  color: var(--text-dim);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: 11.5px;
+}
+.radio-row .src .id { color: var(--gold); }
+.radio-row .src .cs { color: #e8e2cc; }
+.radio-row .msg {
+  color: var(--text);
+}
+.radio-row .msg em { color: var(--text-dim); font-style: italic; }
+.radio-row .msg .static {
+  color: var(--text-faint);
+  letter-spacing: .04em;
+  font-style: italic;
+}
+.radio-row .msg .scream {
+  color: #d96b54;
+  font-weight: 700;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+.radio-row .msg .cmd {
+  color: var(--gold);
+}
+.radio-row .msg .cut {
+  color: var(--danger);
+  letter-spacing: .15em;
+}
+.radio-row--cmd { background: linear-gradient(to right, rgba(201,168,76,0.06), transparent 80%); }
+.radio-row--cmd .t { color: var(--gold-dim); }
+.radio-row--cmd .src .cs { color: var(--gold); }
+
+.radio-row--scream { background: linear-gradient(to right, rgba(217,107,84,0.07), transparent 80%); }
+.radio-row--scream .t { color: var(--danger); }
+.radio-row--scream .src .cs { color: #d96b54; }
+
+.radio-row--static .msg { color: var(--text-faint); font-style: italic; letter-spacing: .04em; }
+.radio-row--static .t,
+.radio-row--static .src { opacity: .55; }
+
+.radio-row--silence { color: var(--text-faint); font-style: italic; padding: 8px 0; }
+.radio-row--silence .msg { color: var(--text-faint); letter-spacing: .25em; text-align: center; }
+
+.radio-row--dead .t,
+.radio-row--dead .src,
+.radio-row--dead .msg {
+  color: var(--text-faint);
+  font-style: italic;
+  letter-spacing: .15em;
+}
+
+.radio-divider {
+  margin: 10px 0;
+  padding: 4px 0;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: .35em;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  border-top: 1px dashed var(--line);
+  border-bottom: 1px dashed var(--line);
+}
+
+@media (max-width: 720px) {
+  .radio-row {
+    grid-template-columns: 1fr;
+    gap: 2px;
+    padding: 8px 0;
+    border-bottom: 1px dotted var(--line);
+  }
+  .radio-row .t { font-size: 10px; }
+}
+
 /* ===== Roster (список личного состава / потерь) ===== */
 .roster {
   border: 1px solid var(--line);

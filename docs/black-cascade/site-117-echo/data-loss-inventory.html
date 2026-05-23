@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Акт инвентаризации утраченных данных // Site-117</title>
+  <link rel="stylesheet" href="../../../style.css" />
+</head>
+<body>
+  <div id="site-nav"></div>
+
+  <main class="report">
+
+    <a href="index.html" class="report__back">&larr; назад в Site-117 «Echo»</a>
+
+    <header class="report-header">
+      <div class="report-header__brand">Фонд SCP</div>
+      <div class="report-header__sub">Архив Site-117 · акт инвентаризации</div>
+
+      <div class="report-classify">
+        <div><div class="label">допуск</div><div class="value">LEVEL 4+</div></div>
+        <div><div class="label">канал</div><div class="value">ARCHIVE-117 · сводный</div></div>
+        <div><div class="label">статус</div><div class="value critical">ОБЪЁМ КОМПРОМЕТАЦИИ ПОДТВЕРЖДЁН</div></div>
+      </div>
+
+      <div class="report-subtitle">приложение к отчёту CYBSEC-117-2024-06-04</div>
+      <h1 class="report-title">Состав скомпрометированных данных<br/>04.06.2024 · ~31 ТБ</h1>
+      <div class="report-subtitle">операция: BLACK CASCADE &middot; ретроспектива 2024</div>
+
+      <div class="report-meta">
+        <div><span class="k">составил</span><span class="v">архивариус Й. Сэтер</span></div>
+        <div><span class="k">дата акта</span><span class="v">11.06.2024</span></div>
+        <div><span class="k">по фактам</span><span class="v">сетевая активность 02:13 — 06:48 UTC</span></div>
+        <div><span class="k">метод</span><span class="v">сопоставление журналов доступа</span></div>
+        <div><span class="k">верифицировал</span><span class="v">рук. архива · Н. Хёг</span></div>
+        <div><span class="k">приобщил к делу</span><span class="v">сл. Н. Кросс, ОВР</span></div>
+      </div>
+    </header>
+
+    <article class="report-body">
+
+      <div class="callout">
+        <strong>Методика.</strong> Точное содержимое скачанного восстановить
+        невозможно (атакующий вёл чтение, не оставлял маркеров). Состав
+        определён по журналам обращений учётной записи <code>echo.svc.maint-04</code>
+        к разделам архива и нагрузке на выходные интерфейсы. Объём в строках &mdash;
+        приближённый. Каждый раздел в таблице &mdash; <em>считать скомпрометированным
+        полностью</em>.
+      </div>
+
+      <h2>I. Сводка</h2>
+      <div class="roster">
+        <div class="roster__head">
+          <div>раздел</div>
+          <div>описание</div>
+          <div>период</div>
+          <div>гриф (исх.)</div>
+          <div>объём</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">ARC-01</div>
+          <div class="nm">Протоколы реагирования МОГ Europe</div>
+          <div class="ro">2014 — 2024</div>
+          <div class="nt">LVL 3+</div>
+          <div class="st">~8.4 ТБ</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">ARC-02</div>
+          <div class="nm">Маршрутные карты эвакуации (объекты Europe)</div>
+          <div class="ro">2018 — 2024</div>
+          <div class="nt">LVL 3+</div>
+          <div class="st">~1.1 ТБ</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">ARC-03</div>
+          <div class="nm">Графики дежурств МОГ Europe</div>
+          <div class="ro">2020 — 2024</div>
+          <div class="nt">LVL 2+</div>
+          <div class="st">~0.3 ТБ</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">ARC-04</div>
+          <div class="nm">Переписка по операциям (ext. & internal)</div>
+          <div class="ro">2019 — 2024</div>
+          <div class="nt">LVL 3+</div>
+          <div class="st">~5.9 ТБ</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">ARC-05</div>
+          <div class="nm">Дешифровки перехвата (партнёры, ПХ, GoI)</div>
+          <div class="ro">2016 — 2024</div>
+          <div class="nt">LVL 4+</div>
+          <div class="st">~3.7 ТБ</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">ARC-06</div>
+          <div class="nm">Биографические профили личного состава MTF</div>
+          <div class="ro">2017 — 2024</div>
+          <div class="nt">LVL 3+</div>
+          <div class="st">~2.2 ТБ</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">ARC-07</div>
+          <div class="nm">Логи и брифинги «закрытых» операций (2021&ndash;)</div>
+          <div class="ro">2021 — 2024</div>
+          <div class="nt">LVL 4+</div>
+          <div class="st">~1.6 ТБ</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">ARC-08</div>
+          <div class="nm">Карты и схемы периметров (Europe, частично NA)</div>
+          <div class="ro">2015 — 2024</div>
+          <div class="nt">LVL 3+</div>
+          <div class="st">~0.9 ТБ</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">ARC-09</div>
+          <div class="nm">Сигнатуры аномальных средств (база) </div>
+          <div class="ro">2020 — 2024</div>
+          <div class="nt">LVL 4+</div>
+          <div class="st">~0.5 ТБ</div>
+        </div>
+        <div class="roster__row">
+          <div class="id">ARC-10</div>
+          <div class="nm">Резервные копии «по запросу» (фрагменты архивов других объектов)</div>
+          <div class="ro">2017 — 2024</div>
+          <div class="nt">LVL 3+</div>
+          <div class="st">~6.4 ТБ</div>
+        </div>
+      </div>
+
+      <p class="muted">
+        Итого: <strong class="gold">~31.0 ТБ</strong>. Объём согласуется с интегральной
+        нагрузкой на выходные интерфейсы за указанный временной отрезок.
+      </p>
+
+      <h2>II. Особо значимое</h2>
+
+      <h3>ARC-04 · переписка</h3>
+      <p>
+        Скомпрометированы переписки по операциям, фактически закрывающие около
+        <strong>11 лет институциональной памяти</strong> отдела координации МОГ Europe.
+        Помимо служебной части, переписка содержит <strong>имена и адреса родственников
+        сотрудников</strong>, переписку по личным конфликтам, заявки на отпуск,
+        медицинские справки. Эта информация даёт оппоненту возможность
+        точечного воздействия на конкретных людей &mdash; не через служебный канал.
+      </p>
+
+      <h3>ARC-05 · дешифровки</h3>
+      <p>
+        Скомпрометированы наши <strong>методы</strong> работы с перехватом противника.
+        Это означает, что: 1) методы больше неприменимы; 2) если их применить, оппонент
+        сам узнает, что мы продолжаем слушать, и заглушит каналы. Восстановить
+        потенциал перехвата &mdash; задача не на месяцы, на годы.
+      </p>
+
+      <h3>ARC-06 · биографические профили</h3>
+      <p>
+        Скомпрометированы анкеты ~<strong>2 800 действующих оперативников</strong>
+        MTF. Включая прежние имена (для перешедших в Фонд из других структур),
+        семейные положения, состояние здоровья, языковые компетенции. После 2024
+        каждое последующее назначение MTF планировалось <em>с учётом</em> того, что
+        ПХ потенциально знает каждого по имени.
+      </p>
+
+      <h3>ARC-07 · «закрытые» операции 2021&ndash;</h3>
+      <p>
+        Содержание &mdash; за пределами компетенции CYBSEC. Один пункт обозначен:
+        в логах учётной записи <code>echo.svc.maint-04</code> зафиксированы
+        обращения к подразделу <span class="redacted">█████████████████████</span>.
+        Этот подраздел не должен был быть доступен указанной учётной записи.
+        Факт обращения подтверждён, содержание подраздела &mdash; на проверке
+        отдельной комиссии О5.
+      </p>
+
+      <h2>III. Не скомпрометировано (подтверждено)</h2>
+      <ul>
+        <li>Бортовые журналы Helix-2 / Helix-3 за период (хранятся вне Site-117).</li>
+        <li>Текущие криптоматериалы (ротированы 12.06.2024).</li>
+        <li>Архивы Site-19, Site-37, Site-78 &mdash; они хранятся локально и в указанный
+          период с Site-117 не синхронизировались.</li>
+        <li>Архив Совета О5 &mdash; <em>отдельно</em>: к нему данная учётная запись
+          не имела доступа в принципе. CYBSEC подтверждает.</li>
+      </ul>
+
+      <div class="callout callout--danger">
+        <strong>Замечание ОВР (постфактум, 17.05.2026):</strong> в свете событий
+        Сайт-37 (09.06.2024, через 5 суток после данной утечки) и
+        Зоны-65 (14.05.2026) &mdash; <em>знание ARC-01 и ARC-02 объясняет, как
+        противник синхронизировал атаки</em>. Стратегическая ценность похищенного
+        реализована полностью.
+      </div>
+
+      <p class="faint" style="margin-top: 32px; font-size: 12px;">
+        — составил: <span class="gold">архивариус Й. Сэтер</span><br/>
+        — заверил: <span class="gold">рук. архива Н. Хёг</span><br/>
+        — приобщил: <span class="gold">сл. Н. Кросс, ОВР</span><br/>
+        — статус: <span class="gold">архив · LVL 4+</span>
+      </p>
+
+    </article>
+
+    <div class="report-footer">
+      <span>досье · архив Site-117 · BLACK CASCADE</span>
+      <span class="motto">Обезопасить. Удержать. Сохранить.</span>
+    </div>
+
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="../../../nav.js"></script>
+</body>
+</html>

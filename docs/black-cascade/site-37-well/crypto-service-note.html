@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Записка криптослужбы · подпись О5-██ // Site-37</title>
+  <link rel="stylesheet" href="../../../style.css" />
+</head>
+<body>
+  <div id="site-nav"></div>
+
+  <main class="report">
+
+    <a href="index.html" class="report__back">&larr; назад в Site-37 «Well»</a>
+
+    <header class="report-header">
+      <div class="report-header__brand">Фонд SCP</div>
+      <div class="report-header__sub">Криптослужба Site-37 · техническое заключение</div>
+
+      <div class="report-classify">
+        <div><div class="label">допуск</div><div class="value">LEVEL 4+</div></div>
+        <div><div class="label">канал</div><div class="value">CRYPT-37 · служебное</div></div>
+        <div><div class="label">статус</div><div class="value critical">ПОДПИСЬ ТЕХНИЧЕСКИ ВАЛИДНА</div></div>
+      </div>
+
+      <div class="report-subtitle">служебная записка</div>
+      <h1 class="report-title">Анализ подписи под директивой<br/>DSO-37-0609-MAINT</h1>
+      <div class="report-subtitle">приобщено к делу BLACK CASCADE / Site-37</div>
+
+      <div class="report-meta">
+        <div><span class="k">составил</span><span class="v">вед. крипт. И. Кашин</span></div>
+        <div><span class="k">контрольный анализ</span><span class="v">вед. крипт. Я. Прокоп</span></div>
+        <div><span class="k">дата записки</span><span class="v">14.06.2024</span></div>
+        <div><span class="k">дата подписи (объект анализа)</span><span class="v">09.06.2024 · 02:11:04 UTC</span></div>
+        <div><span class="k">верифицировал</span><span class="v">рук. CRYPT-37</span></div>
+        <div><span class="k">приобщил</span><span class="v">сл. Н. Кросс, ОВР</span></div>
+      </div>
+    </header>
+
+    <article class="report-body">
+
+      <h2>I. Объект анализа</h2>
+      <p>
+        Криптографическая подпись под директивой <strong class="gold">DSO-37-0609-MAINT</strong>
+        от 09.06.2024 02:11:04 UTC, идентификатор подписавшего &mdash; <strong>О5-██</strong>,
+        используемый канал &mdash; O5-DIRECT/EU-2.
+      </p>
+
+      <h2>II. Что было проверено</h2>
+      <p style="font-family: var(--f-mono); font-size: 13px; line-height: 1.85;">
+        <span class="gold">1.</span> Целостность хеша документа (SHA-512). Совпадает.<br/>
+        <span class="gold">2.</span> Валидность подписи относительно открытого ключа О5-██.
+          Совпадает.<br/>
+        <span class="gold">3.</span> Цепочка сертификации: О5-██ &rarr; Foundation-CA-Root.
+          Не прервана. Сертификат не отозван.<br/>
+        <span class="gold">4.</span> Временные метки RFC 3161: совпадение с
+          независимым TSA-сервером (Geneva-TS). Расхождение &mdash; 0.04 сек,
+          в пределах нормы.<br/>
+        <span class="gold">5.</span> Журнал HSM Site-37 за период 02:10:00 &mdash;
+          02:12:00 UTC: <strong style="color: var(--danger);">пустой</strong>.<br/>
+        <span class="gold">6.</span> Журнал HSM Site-EU-2 (где физически хранится
+          закрытый ключ О5-██) за тот же период: <strong style="color: var(--danger);">пустой</strong>.<br/>
+        <span class="gold">7.</span> Журнал использования канала O5-DIRECT/EU-2:
+          фиксирует факт передачи документа в 02:11:08 UTC, без указания операции
+          подписания.
+      </p>
+
+      <h2>III. Что это означает</h2>
+      <p>
+        Подпись под директивой <strong>технически валидна</strong>. Это значит:
+      </p>
+      <ul>
+        <li>оппонент любого уровня может проверить подпись стандартными средствами
+          и получить положительный результат;</li>
+        <li>любая автоматизированная система Фонда, верифицирующая подпись,
+          приняла приказ как штатный;</li>
+        <li>оснований для отказа в исполнении приказа дежурный диспетчер
+          криптографически &mdash; не имел.</li>
+      </ul>
+
+      <div class="callout callout--danger">
+        <strong>Однако.</strong> Подпись поставлена <em>без обращения к закрытому ключу
+        через HSM</em>. Это технически невозможно при штатном использовании системы.
+        Журнал HSM фиксирует <strong>каждое</strong> обращение к ключу &mdash; включая
+        неуспешные. За проверенный период &mdash; нулевая активность.
+        <strong class="gold">Подпись существует. Операция подписания &mdash; нет.</strong>
+      </div>
+
+      <h2>IV. Возможные технические объяснения</h2>
+      <p>
+        В порядке убывания вероятности, по оценке криптослужбы (на момент 14.06.2024):
+      </p>
+
+      <ol>
+        <li>
+          <strong>Извлечение закрытого ключа О5-██ из HSM.</strong> Теоретически
+          возможно при физическом доступе к HSM с правами «root» и набором
+          инструментов уровня государственной криптоаналитики. Известных
+          прецедентов &mdash; нет. Маркировка целостности HSM Site-EU-2 на момент
+          проверки &mdash; <em>не нарушена</em>.
+        </li>
+        <li>
+          <strong>Компрометация цепочки сертификации выше Foundation-CA-Root.</strong>
+          Теоретически возможна при компрометации корневого центра сертификации
+          Фонда. Маркеры компрометации Root &mdash; <em>не зафиксированы</em>.
+        </li>
+        <li>
+          <strong>«Подпись задним числом» через служебный механизм Foundation-CA-Root.</strong>
+          Существование такого механизма &mdash; декларативно отрицается. Документация
+          не предоставлена. Криптослужба Site-37 формально не имеет права
+          об этом запрашивать.
+        </li>
+        <li>
+          <strong>Иная, неизвестная нам возможность.</strong> Включая &mdash; но не
+          ограничиваясь &mdash; аномальное воздействие на HSM или на оператора,
+          физически присутствовавшего у HSM в момент операции.
+        </li>
+      </ol>
+
+      <p>
+        Криптослужба Site-37 не имеет компетенции в оценке п. 4. Дальнейшая
+        проверка возможна только на уровне отдела исследования аномальных
+        воздействий, либо &mdash; на уровне внутреннего аудита Foundation-CA-Root,
+        что находится за пределами полномочий Site-37.
+      </p>
+
+      <h2>V. Параллель с Site-117</h2>
+      <p>
+        В отчёте CYBSEC-117-2024-06-04 зафиксирована
+        <strong>идентичная аномалия</strong>: валидная операция, не отражённая
+        в журнале HSM. Между двумя случаями &mdash; пять суток. Совпадение, по
+        оценке криптослужбы, <em>исключено</em>: применённый механизм требует
+        ресурсов уровня, доступного крайне ограниченному кругу.
+      </p>
+
+      <h2>VI. Рекомендации</h2>
+      <ol>
+        <li>Внеплановый аудит Foundation-CA-Root &mdash; <em>передан на уровень
+          Совета О5</em>. Результат криптослужбе Site-37 не доводился.</li>
+        <li>Ротация всех корневых ключей &mdash; <em>не проведена</em>. Решение Совета:
+          «преждевременно».</li>
+        <li>Внеплановая физическая инспекция HSM на всех узловых объектах
+          Фонда &mdash; <em>проведена частично</em>. Аномалий не выявлено.</li>
+      </ol>
+
+      <div class="callout callout--danger">
+        <strong>Замечание ОВР (17.05.2026).</strong> К моменту приобщения настоящей
+        записки к делу BLACK CASCADE прошло почти два года. За этот срок ротация
+        корневых ключей так и не была проведена. Причина &mdash; разъясняется
+        в отдельной справке <span class="redacted">██████████████</span>, доступ
+        к которой ОВР не имеет.
+      </div>
+
+      <p class="faint" style="margin-top: 32px; font-size: 12px;">
+        — составил: <span class="gold">вед. крипт. И. Кашин</span><br/>
+        — контроль: <span class="gold">вед. крипт. Я. Прокоп</span><br/>
+        — заверил: <span class="gold">рук. CRYPT-37</span><br/>
+        — приобщил: <span class="gold">сл. Н. Кросс, ОВР</span><br/>
+        — статус: <span class="gold">архив · LVL 4+ · техническая справка</span>
+      </p>
+
+    </article>
+
+    <div class="report-footer">
+      <span>досье · CRYPT Site-37 · BLACK CASCADE</span>
+      <span class="motto">Обезопасить. Удержать. Сохранить.</span>
+    </div>
+
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="../../../nav.js"></script>
+</body>
+</html>
