@@ -14,12 +14,21 @@
     return path.toLowerCase();
   }
 
-  function inDocsFolder() {
-    return /\/docs\//.test(location.pathname) || /\/updates\//.test(location.pathname);
+  // Считаем "глубину" текущей страницы относительно корня сайта
+  // (всё что идёт после /paranoia-scp/ или просто корня для локалки).
+  function rootPrefix() {
+    let p = location.pathname;
+    // обрезаем префикс GitHub Pages, если есть
+    const m = p.match(/\/paranoia-scp\/(.*)$/);
+    p = m ? m[1] : p.replace(/^\//, '');
+    // отбрасываем имя файла
+    const segs = p.split('/').filter(Boolean);
+    segs.pop();
+    return '../'.repeat(segs.length);
   }
 
   function buildNav() {
-    const prefix = inDocsFolder() ? '../' : '';
+    const prefix = rootPrefix();
     const current = currentPage();
 
     const links = NAV_ITEMS.map(item => {
@@ -59,39 +68,16 @@
     }
   }
 
-  const REPO = 'BansheeGIT/paranoia-scp';
-  const BRANCH = 'main';
-  const PAGES_PREFIX = '/paranoia-scp/';
-
-  function currentFilePath() {
-    let p = location.pathname;
-    if (p.startsWith(PAGES_PREFIX)) p = p.slice(PAGES_PREFIX.length - 1);
-    if (p.endsWith('/')) p += 'index.html';
-    if (p.startsWith('/')) p = p.slice(1);
-    if (!p) p = 'index.html';
-    return p;
-  }
-
-  function editUrl() {
-    return `https://github.com/${REPO}/edit/${BRANCH}/${currentFilePath()}`;
-  }
-
   function buildFooter() {
     const year = new Date().getFullYear();
-    const isHttp = location.protocol.startsWith('http');
-    const editLink = isHttp
-      ? `<a href="${editUrl()}" target="_blank" rel="noopener" class="footer__edit" title="Открыть файл в редакторе GitHub">✎ редактировать на GitHub</a>`
-      : '';
-
     const footer = `
       <footer class="footer">
         <div class="footer__inner">
           <div>
             <span class="gold">Paranoia</span> · Garry's Mod SCP-RP · &copy; ${year}
           </div>
-          <div class="footer__right">
-            ${editLink}
-            <span class="faint">доступ только для авторизованного персонала</span>
+          <div class="faint">
+            доступ только для авторизованного персонала
           </div>
         </div>
       </footer>
