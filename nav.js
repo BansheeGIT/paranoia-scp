@@ -116,6 +116,41 @@
     });
   }
 
+  function setupLightbox() {
+    const photos = document.querySelectorAll('.photo img');
+    if (!photos.length) return;
+
+    const box = document.createElement('div');
+    box.className = 'lightbox';
+    box.innerHTML = `
+      <button class="lightbox__close" type="button">[ закрыть ]</button>
+      <img alt="" />
+    `;
+    document.body.appendChild(box);
+
+    const img = box.querySelector('img');
+    const closeBtn = box.querySelector('.lightbox__close');
+
+    const open = (src, alt) => {
+      img.src = src;
+      img.alt = alt || '';
+      box.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    };
+    const close = () => {
+      box.classList.remove('is-open');
+      document.body.style.overflow = '';
+      img.src = '';
+    };
+
+    photos.forEach(p => p.addEventListener('click', () => open(p.src, p.alt)));
+    box.addEventListener('click', (e) => { if (e.target === box) close(); });
+    closeBtn.addEventListener('click', close);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && box.classList.contains('is-open')) close();
+    });
+  }
+
   function setupCounters() {
     const els = document.querySelectorAll('[data-count-to]');
     els.forEach(el => {
@@ -140,5 +175,6 @@
     setupReveal();
     setupTerminalTyping();
     setupCounters();
+    setupLightbox();
   });
 })();

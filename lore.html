@@ -3,88 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Архив // Paranoia SCP-RP</title>
-  <meta name="description" content="ЛОР-документы и архивные записи сервера Paranoia" />
+  <title>Архив ОВР // Paranoia SCP-RP</title>
+  <meta name="description" content="Архив отдела внутренних расследований — досье операций" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div id="site-nav"></div>
 
   <!-- HERO -->
-  <header style="padding: 90px 24px 40px; text-align:center; border-bottom:1px solid var(--line);">
-    <div class="eyebrow">архив документов · уровень доступа 2+</div>
-    <h1 style="margin-top:10px;">Архив Зоны 19</h1>
-    <p class="muted" style="max-width:640px; margin: 16px auto 0;">
-      Каждая папка здесь оплачена чьим-то молчанием. Читай с уважением.
+  <header style="padding: 80px 24px 30px; text-align:center; border-bottom:1px solid var(--line);">
+    <div class="eyebrow">отдел внутренних расследований · АПАИБ</div>
+    <h1 style="margin-top:10px;">Архивный терминал</h1>
+    <p class="muted" style="max-width:680px; margin: 16px auto 0;">
+      Каждая папка — операция или инцидент, открытый по факту прорыва, диверсии,
+      нештатного поведения сотрудника или необъяснённой аномалии. Доступ — по уровню допуска.
     </p>
   </header>
 
   <section>
     <div class="container">
 
-      <!-- Terminal intro -->
-      <div class="terminal reveal mb-3">
-        <div class="terminal__bar">
-          <span><span class="dot"></span>archive@paranoia: /var/lore</span>
-          <span>read-only · encrypted</span>
+      <!-- Desktop window -->
+      <div class="desktop reveal">
+        <div class="desktop__bar">
+          <div class="crumbs">
+            <a href="lore.html">АРХИВ</a>
+            <span class="sep">/</span>
+            <span>ОПЕРАЦИИ</span>
+          </div>
+          <span class="user">оператор · A. VOLKER · clearance 4</span>
         </div>
-<pre class="line"><span class="prompt">archive@paranoia:/var/lore$</span> ls -la
-total <span class="gold">12</span>
-drwxr-xr-x  3 foundation foundation  <span class="gold">12</span>  ARCHIVE/
--rw-r-----  1 foundation foundation     incident-reports
--rw-r-----  1 foundation foundation     personal-logs
--rw-r-----  1 foundation foundation     classified
-<span class="prompt">archive@paranoia:/var/lore$</span> <span class="caret" data-typewriter="cat ARCHIVE/index.list" data-speed="35"></span></pre>
+        <div class="desktop__body">
+          <div class="folders">
+
+            <a href="docs/black-cascade/index.html" class="folder">
+              <div class="folder__icon"></div>
+              <div class="folder__name">Black Cascade</div>
+              <div class="folder__meta">1 документ · 14.05.2026</div>
+              <span class="folder__status folder__status--active">active</span>
+            </a>
+
+            <div class="folder is-locked" title="доступ закрыт">
+              <div class="folder__icon"></div>
+              <div class="folder__name">Hollow Mirror</div>
+              <div class="folder__meta">— · 2026.??.??</div>
+              <span class="folder__status folder__status--classified">classified</span>
+            </div>
+
+            <div class="folder is-locked" title="доступ закрыт">
+              <div class="folder__icon"></div>
+              <div class="folder__name">Quiet Wing</div>
+              <div class="folder__meta">— · 2026.??.??</div>
+              <span class="folder__status folder__status--classified">classified</span>
+            </div>
+
+            <div class="folder is-locked" title="доступ закрыт">
+              <div class="folder__icon"></div>
+              <div class="folder__name">// архив</div>
+              <div class="folder__meta">данные изъяты</div>
+              <span class="folder__status folder__status--closed">closed</span>
+            </div>
+
+          </div>
+        </div>
       </div>
 
-      <!-- Document list -->
-      <div class="section-head">
-        <h2>Список документов</h2>
-        <span class="meta">всего: 4 · отображено: 4</span>
-      </div>
-
-      <ul class="doc-list reveal">
-
-        <li>
-          <span class="doc-id">DOC-001</span>
-          <a class="doc-title" href="docs/doc-001-incident-zone19.html">Инцидент в Зоне 19: 03:14</a>
-          <span class="clearance clearance--2">LVL 2</span>
-          <span class="doc-date">2026.05.10</span>
-        </li>
-
-        <li>
-          <span class="doc-id">DOC-002</span>
-          <a class="doc-title" href="docs/doc-002-on-the-doctor.html">О Чумном Докторе</a>
-          <span class="clearance clearance--3">LVL 3</span>
-          <span class="doc-date">2026.05.12</span>
-        </li>
-
-        <li>
-          <span class="doc-id">DOC-003</span>
-          <a class="doc-title" href="docs/doc-003-paranoia-protocol.html">Протокол «Паранойя»</a>
-          <span class="clearance clearance--4">LVL 4</span>
-          <span class="doc-date">2026.05.15</span>
-        </li>
-
-        <li style="opacity:.55;">
-          <span class="doc-id">DOC-???</span>
-          <span class="doc-title">// файл заблокирован</span>
-          <span class="clearance clearance--5">LVL 5</span>
-          <span class="doc-date">———</span>
-        </li>
-
-      </ul>
-
-      <div class="panel mt-4 reveal">
+      <!-- Editorial note -->
+      <div class="panel reveal">
         <div class="row" style="justify-content:space-between;">
           <div>
-            <div class="eyebrow">подсказка архивариусу</div>
+            <div class="eyebrow">сводка по архиву</div>
             <p class="muted mt-1" style="margin-bottom:0;">
-              Чтобы добавить документ — положи HTML-файл в папку <span class="gold">/docs/</span>
-              по шаблону <span class="gold">_template.html</span> и пропиши строку в этом списке.
+              Архив пополняется по мере поступления отчётов. Новые операции открываются
+              решением руководителя отдела. Запросы на повышение допуска — через тикет в Discord.
             </p>
           </div>
-          <a href="docs/_template.html" class="btn">открыть шаблон</a>
+          <div class="row">
+            <a href="docs/_operation-template.html" class="btn btn--ghost">шаблон папки</a>
+            <a href="docs/_document-template.html" class="btn btn--ghost">шаблон документа</a>
+          </div>
         </div>
       </div>
 

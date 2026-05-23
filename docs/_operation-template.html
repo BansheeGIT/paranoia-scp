@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--
+    ШАБЛОН ПАПКИ-ОПЕРАЦИИ.
+
+    Чтобы завести новую операцию (новую папку на «рабочем столе»):
+
+      1. Создай папку:    docs/<кодовое-имя>/
+                          docs/<кодовое-имя>/assets/   (для фоток/файлов)
+      2. Скопируй этот шаблон в:  docs/<кодовое-имя>/index.html
+      3. Замени все [PLACEHOLDER] в файле на реальные значения.
+      4. Скопируй docs/_document-template.html в:
+                          docs/<кодовое-имя>/<имя-документа>.html
+      5. В lore.html добавь ещё одну <a class="folder"> в сетку:
+
+           <a href="docs/<кодовое-имя>/index.html" class="folder">
+             <div class="folder__icon"></div>
+             <div class="folder__name">[НАЗВАНИЕ]</div>
+             <div class="folder__meta">N документов · ДД.ММ.ГГГГ</div>
+             <span class="folder__status folder__status--active">active</span>
+           </a>
+
+         статусы: active (красный) / ongoing (золото) / closed (зелёный) / classified (серый)
+  -->
+  <title>[КОДОВОЕ ИМЯ] // Архив ОВР</title>
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+<body>
+  <div id="site-nav"></div>
+
+  <section>
+    <div class="container" style="padding-top: 40px;">
+
+      <div class="desktop reveal">
+        <div class="desktop__bar">
+          <div class="crumbs">
+            <a href="../../lore.html">АРХИВ</a>
+            <span class="sep">/</span>
+            <a href="../../lore.html">ОПЕРАЦИИ</a>
+            <span class="sep">/</span>
+            <span>[КОДОВОЕ ИМЯ]</span>
+          </div>
+          <span class="user">оператор · [ИМЯ] · clearance [N]</span>
+        </div>
+
+        <div class="desktop__body">
+
+          <div class="report-classify" style="margin-bottom: 22px;">
+            <div>
+              <div class="label">кодовое имя</div>
+              <div class="value">[КОДОВОЕ ИМЯ]</div>
+            </div>
+            <div>
+              <div class="label">статус</div>
+              <div class="value">ACTIVE</div>
+            </div>
+            <div>
+              <div class="label">руководитель</div>
+              <div class="value">[Имя руководителя]</div>
+            </div>
+          </div>
+
+          <p class="muted" style="margin-bottom: 22px; font-size: 13.5px; line-height: 1.7;">
+            Короткое описание операции: что произошло, когда, кто открыл расследование, какие
+            подразделения вовлечены. Один-два абзаца.
+          </p>
+
+          <div class="files">
+
+            <!-- Шаблон строки документа. Копируй сколько нужно. -->
+            <a href="example-document.html" class="file-row">
+              <div class="file-row__icon"></div>
+              <div>
+                <div class="file-row__name">[Название документа]</div>
+                <div class="file-row__sub">[автор / канал / тип]</div>
+              </div>
+              <span class="clearance clearance--3">LVL 3</span>
+              <span class="file-row__date">ДД.ММ.ГГГГ</span>
+            </a>
+
+          </div>
+
+          <p class="faint mt-3" style="font-size: 11px; letter-spacing: .15em; text-transform: uppercase;">
+            всего файлов: N · доступно: N · скрыто: 0
+          </p>
+
+        </div>
+      </div>
+
+      <div class="center mt-3 reveal">
+        <a href="../../lore.html" class="btn btn--ghost">&larr; назад в архив</a>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="../../nav.js"></script>
+</body>
+</html>
