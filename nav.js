@@ -59,16 +59,39 @@
     }
   }
 
+  const REPO = 'BansheeGIT/paranoia-scp';
+  const BRANCH = 'main';
+  const PAGES_PREFIX = '/paranoia-scp/';
+
+  function currentFilePath() {
+    let p = location.pathname;
+    if (p.startsWith(PAGES_PREFIX)) p = p.slice(PAGES_PREFIX.length - 1);
+    if (p.endsWith('/')) p += 'index.html';
+    if (p.startsWith('/')) p = p.slice(1);
+    if (!p) p = 'index.html';
+    return p;
+  }
+
+  function editUrl() {
+    return `https://github.com/${REPO}/edit/${BRANCH}/${currentFilePath()}`;
+  }
+
   function buildFooter() {
     const year = new Date().getFullYear();
+    const isHttp = location.protocol.startsWith('http');
+    const editLink = isHttp
+      ? `<a href="${editUrl()}" target="_blank" rel="noopener" class="footer__edit" title="Открыть файл в редакторе GitHub">✎ редактировать на GitHub</a>`
+      : '';
+
     const footer = `
       <footer class="footer">
         <div class="footer__inner">
           <div>
             <span class="gold">Paranoia</span> · Garry's Mod SCP-RP · &copy; ${year}
           </div>
-          <div class="faint">
-            доступ только для авторизованного персонала
+          <div class="footer__right">
+            ${editLink}
+            <span class="faint">доступ только для авторизованного персонала</span>
           </div>
         </div>
       </footer>
