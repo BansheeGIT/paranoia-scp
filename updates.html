@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Девблог // Paranoia SCP-RP</title>
+  <meta name="description" content="Журнал обновлений, идей и правок сервера Paranoia" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="site-nav"></div>
+
+  <!-- HERO -->
+  <header style="padding: 90px 24px 40px; text-align:center; border-bottom:1px solid var(--line);">
+    <div class="eyebrow">журнал смены · devblog</div>
+    <h1 style="margin-top:10px;">Журнал обновлений</h1>
+    <p class="muted" style="max-width:640px; margin: 16px auto 0;">
+      Здесь фиксируются изменения сервера, балансные правки, идеи в работе и
+      то, что вчера сломалось — а сегодня починили.
+    </p>
+  </header>
+
+  <section>
+    <div class="container">
+
+      <!-- Filter legend -->
+      <div class="panel mb-3 reveal">
+        <div class="row" style="justify-content:space-between;">
+          <div class="row">
+            <span class="update-card__type update-card__type--feature">FEATURE</span>
+            <span class="update-card__type update-card__type--fix">FIX</span>
+            <span class="update-card__type update-card__type--balance">BALANCE</span>
+            <span class="update-card__type update-card__type--idea">IDEA</span>
+          </div>
+          <span class="meta">обновляется по мере смены</span>
+        </div>
+      </div>
+
+      <div class="section-head">
+        <h2>Последние записи</h2>
+        <span class="meta">записей: 5</span>
+      </div>
+
+      <div class="update-feed reveal">
+
+        <!-- 2026.05.23 -->
+        <article class="update-card">
+          <div class="update-card__head">
+            <span class="update-card__date">2026.05.23</span>
+            <span class="update-card__type update-card__type--feature">FEATURE</span>
+          </div>
+          <h3 class="update-card__title">Запущен сайт-архив Paranoia</h3>
+          <div class="update-card__body">
+            <p>
+              Открыты разделы: главная, правила, архив документов, девблог и донат.
+              Сайт собран на чистом HTML/CSS/JS, без сторонних библиотек. Адаптируется
+              под мобильные.
+            </p>
+            <ul>
+              <li>Добавлен шаблон ЛОР-документа в <span class="gold">/docs/_template.html</span></li>
+              <li>Добавлен шаблон записи девблога в <span class="gold">/updates/_template.html</span></li>
+              <li>Подключены шрифты Cinzel и Share Tech Mono</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- 2026.05.20 -->
+        <article class="update-card">
+          <div class="update-card__head">
+            <span class="update-card__date">2026.05.20</span>
+            <span class="update-card__type update-card__type--balance">BALANCE</span>
+          </div>
+          <h3 class="update-card__title">SCP-049-2: правки баланса</h3>
+          <div class="update-card__body">
+            <p>
+              Реанимат стал слишком живучим на испытаниях — снизили живучесть и пересмотрели
+              правила появления.
+            </p>
+            <ul>
+              <li>HP: 750 → <span class="gold">500</span></li>
+              <li>Респаун: 8 минут → <span class="gold">15 минут</span></li>
+              <li>Доступ к SCP-049: только <span class="gold">science</span> и <span class="gold">medical</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- 2026.05.18 -->
+        <article class="update-card">
+          <div class="update-card__head">
+            <span class="update-card__date">2026.05.18</span>
+            <span class="update-card__type update-card__type--fix">FIX</span>
+          </div>
+          <h3 class="update-card__title">Камеры SCP-173 и питание</h3>
+          <div class="update-card__body">
+            <p>
+              Камеры наблюдения в зоне содержания 173 теперь корректно реагируют на отключение
+              питания. Раньше они продолжали «видеть» объект через темноту — теперь нет.
+            </p>
+          </div>
+        </article>
+
+        <!-- 2026.05.15 -->
+        <article class="update-card">
+          <div class="update-card__head">
+            <span class="update-card__date">2026.05.15</span>
+            <span class="update-card__type update-card__type--idea">IDEA</span>
+          </div>
+          <h3 class="update-card__title">Идея: планшет-интерком для офицеров</h3>
+          <div class="update-card__body">
+            <p>
+              Думаем над интерфейсом планшета: чат-каналы по подразделениям, поиск SCP по ID,
+              профили доступа. Точки расширения вкладок — оставим открытыми, чтобы потом добавлять
+              без переделок.
+            </p>
+            <p class="muted">
+              Статус: <span class="gold">в проработке</span>. Если есть идеи — пиши в Discord.
+            </p>
+          </div>
+        </article>
+
+        <!-- 2026.05.10 -->
+        <article class="update-card">
+          <div class="update-card__head">
+            <span class="update-card__date">2026.05.10</span>
+            <span class="update-card__type update-card__type--feature">FEATURE</span>
+          </div>
+          <h3 class="update-card__title">Фундамент scp_core / zones / intercom</h3>
+          <div class="update-card__body">
+            <p>
+              Заложена базовая архитектура: ядро SCP-объектов, разделение по зонам и интерком-каналы.
+              Активные SCP на сервере: 173, 939, 009, 035, 049. Остальные пока в виде заглушек.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="panel mt-4 reveal">
+        <div class="row" style="justify-content:space-between;">
+          <div>
+            <div class="eyebrow">для меня же на будущее</div>
+            <p class="muted mt-1" style="margin-bottom:0;">
+              Чтобы добавить запись — скопируй <span class="gold">/updates/_template.html</span>
+              в новый файл и вставь блок <code>&lt;article class="update-card"&gt;</code>
+              в начало списка выше.
+            </p>
+          </div>
+          <a href="updates/_template.html" class="btn">открыть шаблон</a>
+        </div>
+      </div>
+
+      <div class="center mt-4 reveal">
+        <a href="index.html" class="btn btn--ghost">&larr; на главную</a>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="nav.js"></script>
+</body>
+</html>

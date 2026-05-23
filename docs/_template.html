@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ШАБЛОН ЛОР-ДОКУМЕНТА.
+       Скопируй этот файл, переименуй (например, doc-004-название.html)
+       и заполни поля ниже. Затем добавь строку с ссылкой в lore.html. -->
+  <title>DOC-XXX // Paranoia Archive</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="site-nav"></div>
+
+  <main class="doc-page">
+
+    <a href="../lore.html" class="muted" style="font-size:12px; letter-spacing:.2em;">&larr; назад в архив</a>
+
+    <header class="doc-header" style="margin-top:18px;">
+      <div>
+        <div class="meta">DOC-XXX · 2026.05.23</div>
+        <h1>Название документа</h1>
+      </div>
+      <span class="clearance clearance--2">LVL 2</span>
+    </header>
+
+    <article class="doc-body">
+      <p class="muted">
+        <strong class="gold">КРАТКАЯ СВОДКА:</strong>
+        Один-два абзаца с описанием сути документа. Что произошло, кто составил,
+        для кого предназначено.
+      </p>
+
+      <h2>Раздел один</h2>
+      <p>
+        Основной текст документа. Можно использовать <span class="gold">подсветку</span>
+        и <span class="redacted">█████████████</span> цензурированные участки.
+      </p>
+
+      <h2>Раздел два</h2>
+      <blockquote>
+        Цитата из устной речи или фрагмент перехваченной записи. Курсив с золотой
+        полосой слева.
+      </blockquote>
+
+      <p>
+        Завершающий абзац. Подпись.
+      </p>
+
+      <p class="faint" style="margin-top:32px; font-size:12px;">
+        — составил: <span class="gold">[имя сотрудника]</span><br/>
+        — заверил: <span class="gold">О5-[номер]</span><br/>
+        — статус: <span class="gold">архив · доступ ограничен</span>
+      </p>
+    </article>
+
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="../nav.js"></script>
+</body>
+</html>
